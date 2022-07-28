@@ -4,7 +4,7 @@
 
 section {
     border-top: 2px solid var(--clr-darkgrey);
-    padding: 4rem 0;
+    padding: 5rem 0;
 }
 
 .sectionTitle {
@@ -19,6 +19,58 @@ section {
     background-color: var(--clr-lightblack);
 }
 
+.aboutSection {
+    display: flex;
+    gap: 4rem;
+}
+
+// Intro text section
+
+.introSubsection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    button {
+        align-self: center;
+        margin-top: 1rem;
+    }
+    h4 {
+        font-family: var(--ff-body), serif;
+        font-size: clamp(0.5rem, 9vw, 1.5rem);
+        font-weight: 400;
+    }
+}
+
+// Skills/tools section
+
+.skillsSubsection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+}
+
+.skillsList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .skill {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 700;
+        line-height: 1.6rem;
+        border: 2px solid var(--clr-accent);
+        background-color: var(--clr-accent);
+        color: var(--clr-lightblack);
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+    }
+}
+
 /* =========================
  * PROJECTS SECTION
  * ======================== */
@@ -28,8 +80,13 @@ section {
  }
 
  .projectContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    .projectDetails {
+        flex: 1;
+    }
+    .projectPhoto {
+        flex: 2;
+    }
  }
 
 /* =========================

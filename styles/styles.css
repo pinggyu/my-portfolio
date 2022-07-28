@@ -364,6 +364,10 @@ p {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* =========================
  * Navigation
  * ======================== */
@@ -432,7 +436,7 @@ footer {
  * ======================== */
 section {
   border-top: 2px solid var(--clr-darkgrey);
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .sectionTitle {
@@ -446,6 +450,78 @@ section {
   background-color: var(--clr-lightblack);
 }
 
+.aboutSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+}
+
+.introSubsection {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+.introSubsection button {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 1rem;
+}
+.introSubsection h4 {
+  font-family: var(--ff-body), serif;
+  font-size: clamp(0.5rem, 9vw, 1.5rem);
+  font-weight: 400;
+}
+
+.skillsSubsection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.skillsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+}
+.skillsList .skill {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  border: 2px solid var(--clr-accent);
+  background-color: var(--clr-accent);
+  color: var(--clr-lightblack);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
 /* =========================
  * PROJECTS SECTION
  * ======================== */
@@ -454,8 +530,19 @@ section {
 }
 
 .projectContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.projectContainer .projectDetails {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.projectContainer .projectPhoto {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 /* =========================
