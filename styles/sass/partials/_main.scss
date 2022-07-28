@@ -53,16 +53,26 @@ section {
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+    @media (min-width: 1125px) {
+        width: 50%;
+    }
 }
 
 .contactFormContainer {
-    width: 50%;
+    width: 100%;
+    @media (min-width: 1125px) {
+        width: 50%;
+    }
 }
 
 .contactSection {
     display: flex;
     gap: 3rem;
+    flex-direction: column;
+    @media (min-width: 1125px) {
+        flex-direction: row;
+    }
 }
 
 // Email & Socials section
@@ -74,7 +84,7 @@ section {
 
 .email {
     font-family: var(--ff-heading), serif;
-    font-size: 2.7rem;
+    font-size: clamp(0.5rem, 9vw, 2.7rem);
     line-height: 3.2rem;
 }
  
@@ -84,6 +94,10 @@ section {
     border: 2px solid var(--clr-darkgrey);
     border-radius: 50%;
     color: var(--clr-white);
+    transition: 0.3s;
+    &:hover{
+        color:var(--clr-accent);
+    }
 }
 
 //  Form section
@@ -108,6 +122,6 @@ section {
         font-weight: 400;
         font-size: 1rem;
         line-height: 1.6rem;
-        color: var(--clr-lightgrey);
+        color: var(--clr-darkgrey);
     }
 }

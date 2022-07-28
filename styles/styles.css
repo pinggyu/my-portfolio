@@ -323,12 +323,11 @@ button, input[type=submit] {
   --clr-lighterblack: #313130;
   --clr-accent: #FDF9CF;
   --clr-lightgrey: #CCCCCC;
-  --clr-darkgrey: #888888;
+  --clr-darkgrey: #939597;
   --clr-silver: #C0C0C0;
   /* Typography */
   --ff-body: "Nunito Sans";
   --ff-heading: "Butler";
-  /* Sizes */
 }
 
 .wrapper {
@@ -487,11 +486,21 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 1125px) {
+  .emailSocialsContainer {
+    width: 50%;
+  }
 }
 
 .contactFormContainer {
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 1125px) {
+  .contactFormContainer {
+    width: 50%;
+  }
 }
 
 .contactSection {
@@ -499,6 +508,18 @@ section {
   display: -ms-flexbox;
   display: flex;
   gap: 3rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 1125px) {
+  .contactSection {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .socialLinks {
@@ -510,7 +531,7 @@ section {
 
 .email {
   font-family: var(--ff-heading), serif;
-  font-size: 2.7rem;
+  font-size: clamp(0.5rem, 9vw, 2.7rem);
   line-height: 3.2rem;
 }
 
@@ -520,6 +541,11 @@ section {
   border: 2px solid var(--clr-darkgrey);
   border-radius: 50%;
   color: var(--clr-white);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.socialIcon:hover {
+  color: var(--clr-accent);
 }
 
 .contactForm {
@@ -549,5 +575,5 @@ section {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.6rem;
-  color: var(--clr-lightgrey);
+  color: var(--clr-darkgrey);
 }
