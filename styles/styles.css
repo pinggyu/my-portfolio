@@ -12,11 +12,6 @@ article, aside, footer, header, nav, section {
   display: block;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 figcaption, figure, main {
   display: block;
 }
@@ -219,4 +214,340 @@ template {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* =========================
+ * Imports
+ * ======================== */
+@font-face {
+  font-family: "Butler";
+  src: url("../assets/fonts/butler/Butler_Regular.otf"), url("../assets/fonts/butler/Butler.woff"), url("../assets/fonts/butler/Butler.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Butler";
+  src: url("../assets/fonts/butler/Butler_Light.otf"), url("../assets/fonts/butler/Butler-Light.woff"), url("../assets/fonts/butler/Butler-Light.woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Butler";
+  src: url("../assets/fonts/butler/Butler_Ultra_Light.otf"), url("../assets/fonts/butler/Butler-UltraLight.woff"), url("../assets/fonts/butler/Butler-UltraLight.woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+/* =========================
+ * General
+ * ======================== */
+html {
+  font-size: 125%;
+}
+
+body {
+  font-family: var(--ff-body), sans-serif;
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  font-weight: 300;
+}
+
+/* =========================
+ * Headers and paragraphs
+ * ======================== */
+h1,
+h3 {
+  font-family: var(--ff-heading), serif;
+  text-transform: uppercase;
+  font-weight: 250;
+}
+
+.logo,
+h2,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-body), sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 8.5rem;
+  font-weight: 250;
+  letter-spacing: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 4.3rem;
+}
+
+/* =========================
+ * Links & buttons
+ * ======================== */
+button, input[type=submit] {
+  font-family: var(--ff-body), sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  border: 2px solid var(--clr-white);
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--clr-white);
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+}
+
+/* =========================
+* For specific design purpose
+* ======================== */
+.smallCaps {
+  font-family: var(--ff-body), sans-serif;
+  text-transform: uppercase;
+  color: var(--clr-silver);
+  font-weight: 700;
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+  letter-spacing: 2px;
+}
+
+:root {
+  --clr-white: #FFFFFF;
+  --clr-black: #1B1A18;
+  --clr-lightblack: #20211F;
+  --clr-lighterblack: #313130;
+  --clr-accent: #FDF9CF;
+  --clr-lightgrey: #CCCCCC;
+  --clr-darkgrey: #888888;
+  --clr-silver: #C0C0C0;
+  /* Typography */
+  --ff-body: "Nunito Sans";
+  --ff-heading: "Butler";
+  /* Sizes */
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+ * Navigation
+ * ======================== */
+header {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header .headerText {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header h1 {
+  color: var(--clr-accent);
+}
+
+.desktopNav {
+  padding: 2rem 0;
+}
+.desktopNav .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+.navLinks a {
+  color: var(--clr-white);
+}
+
+footer {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+
+/* =========================
+ * GENERAL (APPLIES TO ALL SECTIONS)
+ * ======================== */
+section {
+  border-top: 2px solid var(--clr-darkgrey);
+  padding: 4rem 0;
+}
+
+.sectionTitle {
+  padding-bottom: 3rem;
+}
+
+/* =========================
+ * ABOUT SECTION
+ * ======================== */
+.about {
+  background-color: var(--clr-lightblack);
+}
+
+/* =========================
+ * PROJECTS SECTION
+ * ======================== */
+.projects {
+  background-color: var(--clr-lighterblack);
+}
+
+.projectContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* =========================
+ * CONTACT SECTION
+ * ======================== */
+.contact {
+  background-color: var(--clr-lightblack);
+}
+.contact .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contact .smallCaps {
+  padding-bottom: 1.2rem;
+}
+
+.emailSocialsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.contactFormContainer {
+  width: 50%;
+}
+
+.contactSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+}
+
+.socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+.email {
+  font-family: var(--ff-heading), serif;
+  font-size: 2.7rem;
+  line-height: 3.2rem;
+}
+
+.socialIcon {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border: 2px solid var(--clr-darkgrey);
+  border-radius: 50%;
+  color: var(--clr-white);
+}
+
+.contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contactForm .submitBtn {
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 1rem;
+}
+.contactForm .textInput,
+.contactForm textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--clr-darkgrey);
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.25rem;
+  color: var(--clr-white);
+}
+.contactForm .formLabel {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: var(--clr-lightgrey);
 }

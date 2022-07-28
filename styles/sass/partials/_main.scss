@@ -1,0 +1,113 @@
+/* =========================
+ * GENERAL (APPLIES TO ALL SECTIONS)
+ * ======================== */
+
+section {
+    border-top: 2px solid var(--clr-darkgrey);
+    padding: 4rem 0;
+}
+
+.sectionTitle {
+    padding-bottom: 3rem;
+}
+
+/* =========================
+ * ABOUT SECTION
+ * ======================== */
+
+.about {
+    background-color: var(--clr-lightblack);
+}
+
+/* =========================
+ * PROJECTS SECTION
+ * ======================== */
+
+ .projects {
+     background-color: var(--clr-lighterblack);
+ }
+
+ .projectContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
+
+/* =========================
+ * CONTACT SECTION
+ * ======================== */
+
+.contact {
+    background-color: var(--clr-lightblack);
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .smallCaps {
+        padding-bottom: 1.2rem;
+    }
+}
+
+
+
+.emailSocialsContainer {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contactFormContainer {
+    width: 50%;
+}
+
+.contactSection {
+    display: flex;
+    gap: 3rem;
+}
+
+// Email & Socials section
+
+.socialLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.email {
+    font-family: var(--ff-heading), serif;
+    font-size: 2.7rem;
+    line-height: 3.2rem;
+}
+ 
+.socialIcon {
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: 2px solid var(--clr-darkgrey);
+    border-radius: 50%;
+    color: var(--clr-white);
+}
+
+//  Form section
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    .submitBtn {
+        align-self: center;
+        margin-top: 1rem;
+    }
+    .textInput,
+    textarea {
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid var(--clr-darkgrey);
+        margin-bottom: 1rem;
+        padding: 0.5rem 0.25rem;
+        color: var(--clr-white);
+    }
+    .formLabel {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        color: var(--clr-lightgrey);
+    }
+}

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/f21b5dfadd.js" crossorigin="anonymous"></script>
     <!-- Stylesheet -->
@@ -15,137 +18,166 @@
     <title>Ping Yu</title>
 </head>
 <body>
-    <nav class="mainNav">
-        <div class="wrapper">
-            <div class="logo">
-                Ping Yu
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
     <header>
-        <div class="wrapper">
+        <nav class="desktopNav">
+            <div class="wrapper">
+                <div class="logo">
+                    Ping Yu
+                </div>
+                <ul class="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="headerText wrapper">
             <h1>Ping Yu</h1>
-            <h2>Front End Web developer</h2>
+            <h2>Front-End Web Developer</h2>
         </div>
     </header>
     <main>
         <section class="about" id="#about">
             <div class="wrapper">
-                <h3>About</h3>
-                <p>Hi, I'm Ping. I'm a front end web developer based in Toronto, Canada with a background as a CPA and a passion for building responsive and accessible web applications to create great user experiences. Previously, I was working at a large consulting firm and I also have experience working on the BizOps team for a Series A tech startup.
-                <p>In my free time, I enjoy staying active, traveling and creating social media content for various brands (like Nintendo, Visa, Hudson's Bay and more)! </p>
-                <h4>Toolkit/Skills</h4>
-                <ul class="skills-list">
-                    <li>HTML/CSS</li>
-                    <li>Sass</li>
-                    <li>JavaScript</li>
-                    <li>jQuery</li>
-                    <li>React</li>
-                    <li>Firebase</li>
-                    <li>Git</li>
-                    <li>GitHub Collaboration</li>
-                    <li>Pair Programming</li>
-                    <li>Accessibility</li>
-                    <li>Responsive Design</li>
-                </ul>
-                <button>View Resume</button>
+                <h3 class="sectionTitle">About</h3>
+                <div class="aboutSection">
+                    <p>Hi, I'm Ping, a front-end web developer based in Toronto, Canada with a background as a CPA. I'm passionate about
+                        building responsive and accessible web applications to create great user experiences. Previously, I was working at a
+                        large consulting firm and I also have experience working in bizops for a tech startup.
+                    <p>In my free time, I enjoy staying active, traveling and creating social media content for various brands (like
+                        Nintendo, Visa, Hudson's Bay and more)! </p>
+                    <h4>Toolkit/Skills</h4>
+                    <ul class="skills-list">
+                        <li>HTML/CSS</li>
+                        <li>Sass</li>
+                        <li>JavaScript</li>
+                        <li>jQuery</li>
+                        <li>React</li>
+                        <li>Firebase</li>
+                        <li>Git</li>
+                        <li>GitHub Collaboration</li>
+                        <li>Pair Programming</li>
+                        <li>Accessibility</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                    <button>View Resume</button>
+                </div>
             </div>
         </section>
 
         <section class="projects" id="#projects">
             <div class="wrapper">
-                <h3>Projects</h3>
+                <h3 class="sectionTitle">Projects</h3>
                 <p>Recent Projects</p>
-                <div class="projectContainer">
-                    <div class="projectDetails">
-                        <h4 class="projectName">Project Title</h4>
-                        <h5 class="projectSubtitle">Project Sub-title</h5>
-                        <h6 class="projectSummary">Summary</h6>
-                        <button>Live Site</button>
-                        <button>View Code</button>
+                <div class="projectsSection">
+                    <!-- Project 1 -->
+                    <div class="projectContainer">
+                        <div class="projectDetails">
+                            <h4 class="projectName">Project Title</h4>
+                            <h5 class="projectSubtitle">Project Sub-title</h5>
+                            <h6 class="projectSummary">Summary</h6>
+                            <button>Live Site</button>
+                            <button>View Code</button>
+                        </div>
+                        <div class="projectPhoto">
+                    
+                        </div>
                     </div>
-                    <div class="projectPhoto">
-
+                    <!-- Project 2 -->
+                    <div class="projectContainer">
+                        <div class="projectDetails">
+                            <h4 class="projectName">Project Title</h4>
+                            <h5 class="projectSubtitle">Project Sub-title</h5>
+                            <h6 class="projectSummary">Summary</h6>
+                            <button>Live Site</button>
+                            <button>View Code</button>
+                        </div>
+                        <div class="projectPhoto">
+                    
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="projectContainer">
+                        <div class="projectDetails">
+                            <h4 class="projectName">Project Title</h4>
+                            <h5 class="projectSubtitle">Project Sub-title</h5>
+                            <h6 class="projectSummary">Summary</h6>
+                            <button>Live Site</button>
+                            <button>View Code</button>
+                        </div>
+                        <div class="projectPhoto">
+                    
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="projectContainer">
+                        <div class="projectDetails">
+                            <h4 class="projectName">Project Title</h4>
+                            <h5 class="projectSubtitle">Project Sub-title</h5>
+                            <h6 class="projectSummary">Summary</h6>
+                            <button>Live Site</button>
+                            <button>View Code</button>
+                        </div>
+                        <div class="projectPhoto">
+                    
+                        </div>
                     </div>
                 </div>
-                <div class="projectContainer">
-                    <div class="projectDetails">
-                        <h4 class="projectName">Project Title</h4>
-                        <h5 class="projectSubtitle">Project Sub-title</h5>
-                        <h6 class="projectSummary">Summary</h6>
-                        <button>Live Site</button>
-                        <button>View Code</button>
-                    </div>
-                    <div class="projectPhoto">
-                
-                    </div>
-                </div>
-                <div class="projectContainer">
-                    <div class="projectDetails">
-                        <h4 class="projectName">Project Title</h4>
-                        <h5 class="projectSubtitle">Project Sub-title</h5>
-                        <h6 class="projectSummary">Summary</h6>
-                        <button>Live Site</button>
-                        <button>View Code</button>
-                    </div>
-                    <div class="projectPhoto">
-                
-                    </div>
-                </div>
-                <div class="projectContainer">
-                    <div class="projectDetails">
-                        <h4 class="projectName">Project Title</h4>
-                        <h5 class="projectSubtitle">Project Sub-title</h5>
-                        <h6 class="projectSummary">Summary</h6>
-                        <button>Live Site</button>
-                        <button>View Code</button>
-                    </div>
-                    <div class="projectPhoto">
-                
-                    </div>
-                </div>
+            </div>
         </section>
 
         <section class="contact" id="#contact">
             <div class="wrapper">
-                <h3>Get in touch</h3>
-                <p class="email">pingyuuu@gmail.com</p>
-                <div class="contactFormContainer">
-                    <form action="" class="contactForm">
-                        <label for="name" class="formLabel">Name</label>
-                        <input type="text" id="name">
-                        <label for="email" class="formLabel">E-Mail</label>
-                        <input type="text" id="email">
-                        <label for="message" class="formLabel">Message</label>
-                        <input type="text" id="message">
-                        <input type="submit" value="submit">
-                    </form>
-                </div>
-                <div class="socials">
-                    <a href="https://github.com/pinggyu">
-                        <i class="fa-brands fa-github" aria-hidden="true"></i>
-                        <span class="sr-only">Link to Github</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/pingyuuu/">
-                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-                        <span class="sr-only">Link to LinkedIn</span>
-                    </a>
-                    <a href="mailto:pingyuuu@gmail.com">
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        <span class="sr-only">Link to Email</span>
-                    </a>
+                <h3 class="sectionTitle">Get in touch</h3>
+                <div class="contactSection">
+                    <div class="emailSocialsContainer">
+                        <div class="emailContainer">
+                            <p class="smallCaps">E-Mail</p>
+                            <p class="email">pingyuuu@gmail.com</p>
+                        </div>
+                        <div class="socials">
+                            <p class="smallCaps">Find me on</p>
+                            <ul class="socialLinks">
+                                <li>
+                                    <a href="https://github.com/pinggyu">
+                                        <i class="fa-brands fa-github socialIcon" aria-hidden="true"></i>
+                                        <span class="sr-only">Link to Github</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/pingyuuu/">
+                                        <i class="fa-brands fa-linkedin-in socialIcon" aria-hidden="true"></i>
+                                        <span class="sr-only">Link to LinkedIn</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:pingyuuu@gmail.com">
+                                        <i class="fa-solid fa-envelope socialIcon" aria-hidden="true"></i>
+                                        <span class="sr-only">Link to Email</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contactFormContainer">
+                        <p class="smallCaps">Drop a line below</p>
+                        <form action="" class="contactForm">
+                            <label for="name" class="formLabel">Name</label>
+                            <input type="text" id="name" class="textInput" required>
+                            <label for="email" class="formLabel">E-Mail</label>
+                            <input type="text" id="email" class="textInput" required>
+                            <label for="message" class="formLabel">Message</label>
+                            <textarea id="message" cols="20" rows="5" required></textarea>
+                            <input type="submit" value="submit" class="submitBtn">
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
     <footer>
-        Ⓒ Ping Yu 
+        Ⓒ 2022 Ping Yu 
     </footer>
 </body>
 </html>

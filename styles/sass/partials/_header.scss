@@ -1,0 +1,36 @@
+/* =========================
+ * Navigation
+ * ======================== */
+
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .headerText {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        color: var(--clr-accent);
+    }
+}
+
+.desktopNav {
+    padding: 2rem 0;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+    a {
+         color: var(--clr-white);
+    }
+}
+
