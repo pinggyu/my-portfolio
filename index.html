@@ -19,21 +19,19 @@
 </head>
 <body>
     <header>
-        <nav class="desktopNav">
-            <div class="wrapper">
-                <div class="logo">
-                    Ping Yu
-                </div>
-                <ul class="navLinks">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+        <nav class="desktopNav wrapper">
+            <div class="logo">
+                Ping Yu
             </div>
+            <ul class="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
         <div class="headerText wrapper">
             <h1>Ping Yu</h1>
-            <h2>Front End Developer</h2>
+            <h2>Front End Web Developer</h2>
         </div>
     </header>
     <main>
@@ -42,7 +40,7 @@
                 <h3 class="sectionTitle">About</h3>
                 <div class="aboutSection">
                     <div class="introSubsection">
-                        <h4>Hi, I'm Ping ⎯ a front end developer based in Toronto, Canada.</h4>
+                        <h4>Hi, I'm Ping ⎯ a web developer based in Toronto, Canada.</h4>
                         <p>I specialize in front end web development and I'm passionate about building responsive and accessible web applications to create great user experiences. Previously, I was working at a large consulting firm as a CPA and I also have experience working in bizops for an early stage tech startup.
                         <p>In my free time, I enjoy staying active, traveling and creating social media content for various brands (like Nintendo, Visa, Hudson's Bay and more)! </p>
                         <button>View Resume</button>                        
@@ -50,18 +48,18 @@
                     <div class="skillsSubsection">
                         <h4>Toolkit/Skills</h4>
                         <ul class="skillsList">
-                            <li class="skill">HTML</li>
-                            <li class="skill">CSS</li>
-                            <li class="skill">Sass</li>
-                            <li class="skill">JavaScript</li>
-                            <li class="skill">jQuery</li>
-                            <li class="skill">React</li>
-                            <li class="skill">Firebase</li>
-                            <li class="skill">Git</li>
-                            <li class="skill">GitHub Collaboration</li>
-                            <li class="skill">Pair Programming</li>
-                            <li class="skill">Accessibility</li>
-                            <li class="skill">Responsive Design</li>
+                            <li class="tag">HTML</li>
+                            <li class="tag">CSS</li>
+                            <li class="tag">Sass</li>
+                            <li class="tag">JavaScript</li>
+                            <li class="tag">jQuery</li>
+                            <li class="tag">React</li>
+                            <li class="tag">Firebase</li>
+                            <li class="tag">Git</li>
+                            <li class="tag">GitHub Collaboration</li>
+                            <li class="tag">Pair Programming</li>
+                            <li class="tag">Accessibility</li>
+                            <li class="tag">Responsive Design</li>
                         </ul>
                     </div>
                 </div>
@@ -70,61 +68,57 @@
 
         <section class="projects" id="projects">
             <div class="wrapper">
-                <h3 class="sectionTitle">Projects</h3>
-                <p>Recent Projects</p>
-                <div class="projectsSection">
-                    <!-- Project 1 -->
-                    <div class="projectContainer">
-                        <div class="projectDetails">
-                            <h4 class="projectName">Project Title</h4>
-                            <h5 class="projectSubtitle">Project Sub-title</h5>
-                            <h6 class="projectSummary">Summary</h6>
-                            <button>Live Site</button>
-                            <button>View Code</button>
+                <h3 class="sectionTitle">Portfolio</h3>
+                <h4>Recent Projects</h4>
+                <p class="hoverMsg">Hover to view the project demo.</p>
+                <ul class="projectsSection">
+                <!-- Project 1 -->
+                    <li class="projectDemo">
+                        <video src="./assets/images/jobseekr.mov" loop muted="muted"></video>
+                    </li>                        
+                    <li class="projectDetails">
+                        <div class="projectText">
+                            <h4 class="projectName">JobSeekr</h4>
+                            <p class="projectSummary">Summary</p>
                         </div>
-                        <div class="projectPhoto">
-                            <img src="./assets/images/jobseekr.png" alt="JobSeekr Project">
+                        <div class="projectTools">
+                            <ul class="projectToolsList">
+                                <li class="tag">HTML</li>
+                                <li class="tag">Sass</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">Pair Programming</li>
+                            </ul>
                         </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="projectContainer">
-                        <div class="projectDetails">
-                            <h4 class="projectName">Project Title</h4>
-                            <h5 class="projectSubtitle">Project Sub-title</h5>
-                            <h6 class="projectSummary">Summary</h6>
-                            <button>Live Site</button>
-                            <button>View Code</button>
+                        <div class="projectLinks">
+                            <a href="https://jobseekr.netlify.app/">Live Site</a>
+                            <a href="https://github.com/ping-ryan/jobseekr">View Code</a>
                         </div>
-                        <div class="projectPhoto">
-                            <img src="./assets/images/jobseekr.png" alt="JobSeekr Project">
+                    </li>
+                <!-- Project 2 -->
+                    <li class="projectDetails">
+                        <div class="projectText">
+                            <h4 class="projectName">Willow</h4>
+                            <p class="projectSummary">Summary</p>
                         </div>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="projectContainer">
-                        <div class="projectDetails">
-                            <h4 class="projectName">Project Title</h4>
-                            <h5 class="projectSubtitle">Project Sub-title</h5>
-                            <h6 class="projectSummary">Summary</h6>
-                            <button>Live Site</button>
-                            <button>View Code</button>
+                        <div class="projectTools">
+                            <ul class="projectToolsList">
+                                <li class="tag">HTML</li>
+                                <li class="tag">Sass</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">Responsive Design</li>
+                            </ul>
                         </div>
-                        <div class="projectPhoto">
-                            <img src="./assets/images/jobseekr.png" alt="JobSeekr Project">
+                        <div class="projectLinks">
+                            <a href="https://willowblog.netlify.app/">Live Site</a>
+                            <a href="https://github.com/pinggyu/ping-yu-project-one">View Code</a>
                         </div>
-                    </div>
-                    <!-- Project 4 -->
-                    <div class="projectContainer">
-                        <div class="projectDetails">
-                            <h4 class="projectName">Project Title</h4>
-                            <h5 class="projectSubtitle">Project Sub-title</h5>
-                            <h6 class="projectSummary">Summary</h6>
-                            <button>Live Site</button>
-                            <button>View Code</button>
-                        </div>
-                        <div class="projectPhoto">
-                            <img src="./assets/images/jobseekr.png" alt="JobSeekr Project">
-                        </div>
-                    </div>
+                    </li>
+                    <li class="projectDemo">
+                        <video src="./assets/images/willow.mov" loop muted="muted"></video>
+                    </li>
+                </ul>
+                <div class="viewMore">
+                    <a href="https://github.com/pinggyu">View More</a>
                 </div>
             </div>
         </section>
@@ -180,7 +174,7 @@
 
     </main>
     <footer>
-        Ⓒ Ping Yu 
+        Ⓒ 2022 Ping Yu 
     </footer>
 </body>
 </html>

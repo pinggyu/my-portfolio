@@ -76,7 +76,12 @@ h2 {
 }
 
 h3 {
-    font-size: 4.3rem;
+    font-size: clamp(3rem, 9vw, 4.3rem);
+}
+
+h4 {
+    font-size: clamp(0.5rem, 9vw, 1.5rem);
+    font-weight: 400;
 }
 
 /* =========================
@@ -84,18 +89,7 @@ h3 {
  * ======================== */
 
  button, input[type="submit"] {
-    font-family: var(--ff-body), sans-serif;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 700;
-    line-height: 1.6rem;
-    border: 2px solid var(--clr-white);
-    cursor: pointer;
-    background-color: transparent;
-    color: var(--clr-white);
-    text-align: center;
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
+    @include buttonStyle;
  }
 
  /* =========================
@@ -103,12 +97,12 @@ h3 {
  * ======================== */
 
 //  To introduce a topic
- .smallCaps {
+.smallCaps {
     font-family: var(--ff-body), sans-serif;
     text-transform: uppercase;
-    color: var(--clr-silver);
+    color: var(--clr-lightgrey);
     font-weight: 700;
     font-size: 0.6rem;
     line-height: 0.8rem;
     letter-spacing: 2px;
- }
+}

@@ -282,7 +282,12 @@ h2 {
 }
 
 h3 {
-  font-size: 4.3rem;
+  font-size: clamp(3rem, 9vw, 4.3rem);
+}
+
+h4 {
+  font-size: clamp(0.5rem, 9vw, 1.5rem);
+  font-weight: 400;
 }
 
 /* =========================
@@ -301,6 +306,13 @@ button, input[type=submit] {
   text-align: center;
   padding: 1rem 1.5rem;
   border-radius: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+button:hover, input[type=submit]:hover {
+  border: 2px solid var(--clr-accent);
+  background-color: var(--clr-accent);
+  color: var(--clr-lighterblack);
 }
 
 /* =========================
@@ -309,7 +321,7 @@ button, input[type=submit] {
 .smallCaps {
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
-  color: var(--clr-silver);
+  color: var(--clr-lightgrey);
   font-weight: 700;
   font-size: 0.6rem;
   line-height: 0.8rem;
@@ -322,9 +334,8 @@ button, input[type=submit] {
   --clr-lightblack: #20211F;
   --clr-lighterblack: #313130;
   --clr-accent: #FDF9CF;
-  --clr-lightgrey: #CCCCCC;
+  --clr-lightgrey: #C0C0C0;
   --clr-darkgrey: #939597;
-  --clr-silver: #C0C0C0;
   /* Typography */
   --ff-body: "Nunito Sans";
   --ff-heading: "Butler";
@@ -399,14 +410,12 @@ header .headerText {
       -ms-flex-align: center;
           align-items: center;
 }
-header h1 {
+header h2 {
   color: var(--clr-accent);
 }
 
 .desktopNav {
   padding: 2rem 0;
-}
-.desktopNav .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,6 +464,18 @@ section {
   display: -ms-flexbox;
   display: flex;
   gap: 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 1125px) {
+  .aboutSection {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .introSubsection {
@@ -474,11 +495,6 @@ section {
   -ms-flex-item-align: center;
       align-self: center;
   margin-top: 1rem;
-}
-.introSubsection h4 {
-  font-family: var(--ff-body), serif;
-  font-size: clamp(0.5rem, 9vw, 1.5rem);
-  font-weight: 400;
 }
 
 .skillsSubsection {
@@ -509,7 +525,8 @@ section {
       flex-wrap: wrap;
   gap: 1rem;
 }
-.skillsList .skill {
+
+.tag {
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 700;
@@ -518,8 +535,8 @@ section {
   background-color: var(--clr-accent);
   color: var(--clr-lightblack);
   text-align: center;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
+  padding: 0.4rem 0.7rem;
+  border-radius: 25px;
 }
 
 /* =========================
@@ -528,21 +545,96 @@ section {
 .projects {
   background-color: var(--clr-lighterblack);
 }
+.projects a {
+  font-family: var(--ff-body), sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  border: 2px solid var(--clr-white);
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--clr-white);
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.projects a:hover {
+  border: 2px solid var(--clr-accent);
+  background-color: var(--clr-accent);
+  color: var(--clr-lighterblack);
+}
 
-.projectContainer {
+.projectsSection {
+  display: grid;
+  grid-template-columns: 100%;
+  padding-top: 2rem;
+  grid-gap: 2rem;
+}
+@media (min-width: 1000px) {
+  .projectsSection {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.hoverMsg {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .hoverMsg {
+    display: block;
+  }
+}
+
+.projectDemo video {
+  width: 100%;
+  border: 0.15rem solid var(--clr-lightgrey);
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.projectDemo video:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+}
+
+.projectLinks {
+  margin-top: 3rem;
+}
+
+.projectDetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.projectContainer .projectDetails {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+
+.projectToolsList {
+  margin-top: 2rem;
 }
-.projectContainer .projectPhoto {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+.projectToolsList li {
+  display: inline;
+}
+
+.viewMore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
 }
 
 /* =========================

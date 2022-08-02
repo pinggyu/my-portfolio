@@ -22,6 +22,10 @@ section {
 .aboutSection {
     display: flex;
     gap: 4rem;
+    flex-direction: column;
+    @media (min-width: 1125px) {
+        flex-direction: row;
+    }
 }
 
 // Intro text section
@@ -34,11 +38,6 @@ section {
     button {
         align-self: center;
         margin-top: 1rem;
-    }
-    h4 {
-        font-family: var(--ff-body), serif;
-        font-size: clamp(0.5rem, 9vw, 1.5rem);
-        font-weight: 400;
     }
 }
 
@@ -57,37 +56,76 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
-    .skill {
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        font-weight: 700;
-        line-height: 1.6rem;
-        border: 2px solid var(--clr-accent);
-        background-color: var(--clr-accent);
-        color: var(--clr-lightblack);
-        text-align: center;
-        padding: 0.5rem 1rem;
-        border-radius: 50px;
-    }
+}
+
+.tag {
+    @include skillsTag;
 }
 
 /* =========================
  * PROJECTS SECTION
  * ======================== */
 
- .projects {
-     background-color: var(--clr-lighterblack);
- }
+.projects {
+    background-color: var(--clr-lighterblack);
+    a {
+        @include buttonStyle;
+    }
+}
 
- .projectContainer {
+.projectsSection {
+    display: grid;
+    grid-template-columns: 100%;
+    padding-top: 2rem;
+    grid-gap: 2rem;
+        @media (min-width: 1000px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+}
+
+.hoverMsg {
+    display: none;
+        @media (min-width: 1000px) {
+            display: block;
+        }
+}
+
+.projectDemo {
+    video {
+        width: 100%;
+        border: 0.15rem solid var(--clr-lightgrey);
+        filter: brightness(50%);
+        transition: 0.3s;
+        &:hover {
+            filter: brightness(100%);
+        }
+    }
+}
+
+.projectLinks {
+    margin-top: 3rem;
+}
+
+.projectDetails {
     display: flex;
-    .projectDetails {
-        flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projectToolsList {
+    margin-top: 2rem;
+    li {
+        display: inline;
     }
-    .projectPhoto {
-        flex: 2;
-    }
- }
+}
+
+.viewMore {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+}
 
 /* =========================
  * CONTACT SECTION
@@ -103,8 +141,6 @@ section {
         padding-bottom: 1.2rem;
     }
 }
-
-
 
 .emailSocialsContainer {
     display: flex;
