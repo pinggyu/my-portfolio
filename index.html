@@ -40,8 +40,8 @@
                 <h3 class="sectionTitle">About</h3>
                 <div class="aboutSection">
                     <div class="introSubsection">
-                        <h4>Hi, I'm Ping ⎯ a web developer based in Toronto, Canada.</h4>
-                        <p>I specialize in front end web development and I'm passionate about building responsive and accessible web applications to create great user experiences. Previously, I was working at a large consulting firm as a CPA and I also have experience working in bizops for an early stage tech startup.
+                        <h4>Hi, I'm Ping ⎯ a web developer specializing in frontend.</h4>
+                        <p>I'm passionate about building responsive and accessible web applications to create great user experiences. Previously, I was working at a large consulting firm as a CPA and I also have experience working in bizops for an early stage tech startup.
                         <p>In my free time, I enjoy staying active, traveling and creating social media content for various brands (like Nintendo, Visa, Hudson's Bay and more)! </p>
                         <button>View Resume</button>                        
                     </div>
@@ -70,23 +70,25 @@
             <div class="wrapper">
                 <h3 class="sectionTitle">Portfolio</h3>
                 <h4>Recent Projects</h4>
-                <p class="hoverMsg">Hover to view the project demo.</p>
+                <p class="hoverMsg accentText">( Hover to view the project demo )</p>
                 <ul class="projectsSection">
                 <!-- Project 1 -->
                     <li class="projectDemo">
-                        <video src="./assets/images/jobseekr.mov" loop muted="muted"></video>
+                        <video>
+                            <source src="./assets/images/jobseekr.mov" loop muted="muted">
+                            Your browser does not support the HTML5 video element.
+                        </video>
                     </li>                        
                     <li class="projectDetails">
                         <div class="projectText">
                             <h4 class="projectName">JobSeekr</h4>
-                            <p class="projectSummary">Summary</p>
+                            <p class="projectSummary">JobSeekr is a job searching website leveraging the Adzuna API and using Vanilla JS. Features include a dark/light mode toggle, error handling, a minimal UI, sorting and pagination of results.   </p>
                         </div>
                         <div class="projectTools">
                             <ul class="projectToolsList">
                                 <li class="tag">HTML</li>
                                 <li class="tag">Sass</li>
                                 <li class="tag">JavaScript</li>
-                                <li class="tag">Pair Programming</li>
                             </ul>
                         </div>
                         <div class="projectLinks">
@@ -98,14 +100,13 @@
                     <li class="projectDetails">
                         <div class="projectText">
                             <h4 class="projectName">Willow</h4>
-                            <p class="projectSummary">Summary</p>
+                            <p class="projectSummary">Willow is a multi-page PSD conversion made using given design files, featuring a Home, Blog and Contact page. This is a fully responsive website, built in Sass, and adheres to accessibility best standards.</p>
                         </div>
                         <div class="projectTools">
                             <ul class="projectToolsList">
                                 <li class="tag">HTML</li>
                                 <li class="tag">Sass</li>
                                 <li class="tag">JavaScript</li>
-                                <li class="tag">Responsive Design</li>
                             </ul>
                         </div>
                         <div class="projectLinks">
@@ -114,11 +115,14 @@
                         </div>
                     </li>
                     <li class="projectDemo">
-                        <video src="./assets/images/willow.mov" loop muted="muted"></video>
+                        <video>
+                            <source src="./assets/images/willow.mov" loop muted="muted">
+                            Your browser does not support the HTML5 video element.
+                        </video>
                     </li>
                 </ul>
                 <div class="viewMore">
-                    <a href="https://github.com/pinggyu">View More</a>
+                    <a href="https://github.com/pinggyu">View More →</a>
                 </div>
             </div>
         </section>
@@ -159,13 +163,23 @@
                     <div class="contactFormContainer">
                         <p class="smallCaps">Drop a line below</p>
                         <form action="" class="contactForm">
-                            <label for="name" class="formLabel">Name</label>
-                            <input type="text" id="name" class="textInput" required>
-                            <label for="email" class="formLabel">E-mail</label>
-                            <input type="text" id="email" class="textInput" required>
-                            <label for="message" class="formLabel">Message</label>
-                            <textarea id="message" cols="20" rows="5" required></textarea>
-                            <input type="submit" value="submit" class="submitBtn">
+                            <!-- Input 1 -->
+                            <div class="formRow">
+                                <input type="text" id="name" class="formInput" required>
+                                <label for="name" class="inputLabel">Name</label>
+                            </div>
+                            <!-- Input 2 -->
+                            <div class="formRow">
+                                <input type="text" id="email" class="formInput" required>
+                                <label for="email" class="inputLabel">E-mail</label>
+                            </div>
+                            <!-- Input  -->
+                            <div class="formRow">
+                                <textarea id="message" class="formInput" cols="20" rows="5" required></textarea>
+                                <label for="message" class="inputLabel">Message</label>
+                            </div>
+                            <!-- Submit button -->
+                            <button class="submitBtn">Send Message →</button>
                         </form>
                     </div>
                 </div>

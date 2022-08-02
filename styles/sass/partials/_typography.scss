@@ -106,3 +106,12 @@ h4 {
     line-height: 0.8rem;
     letter-spacing: 2px;
 }
+
+// Accent text
+.accentText {
+    font-family: var(--ff-body), sans-serif;
+    color: var(--clr-accent);
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
