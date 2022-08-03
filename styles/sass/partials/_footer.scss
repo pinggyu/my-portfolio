@@ -1,5 +1,9 @@
 footer {
     text-align: center;
-    text-transform: uppercase;
     padding: 0.5rem;
+    .copyright {
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--color-dark-1);
+    }
 }

@@ -246,8 +246,8 @@ html {
 
 body {
   font-family: var(--ff-body), sans-serif;
-  background-color: var(--clr-black);
-  color: var(--clr-white);
+  background-color: var(--color-light-4);
+  color: var(--color-dark-3);
   font-weight: 300;
 }
 
@@ -299,10 +299,10 @@ h4 {
   font-size: 0.8rem;
   font-weight: 700;
   line-height: 1.6rem;
-  border: 2px solid var(--clr-white);
+  border: 2px solid var(--color-dark-3);
   cursor: pointer;
   background-color: transparent;
-  color: var(--clr-white);
+  color: var(--color-dark-3);
   text-align: center;
   padding: 1rem 1.5rem;
   border-radius: 50px;
@@ -310,9 +310,9 @@ h4 {
   transition: 0.3s;
 }
 .button:hover, .submitBtn:hover {
-  border: 2px solid var(--clr-accent);
-  background-color: var(--clr-accent);
-  color: var(--clr-lighterblack);
+  border: 2px solid var(--color-dark-4);
+  background-color: var(--color-dark-4);
+  color: var(--color-light-3);
 }
 
 /* =========================
@@ -321,7 +321,7 @@ h4 {
 .smallCaps {
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
-  color: var(--clr-lightgrey);
+  color: var(--color-dark-3);
   font-weight: 700;
   font-size: 0.6rem;
   line-height: 0.8rem;
@@ -330,20 +330,23 @@ h4 {
 
 .accentText {
   font-family: var(--ff-body), sans-serif;
-  color: var(--clr-accent);
+  color: var(--color-dark-4);
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 1.6rem;
 }
 
 :root {
-  --clr-white: #FFFFFF;
-  --clr-black: #1B1A18;
-  --clr-lightblack: #20211F;
-  --clr-lighterblack: #313130;
-  --clr-accent: #FDF9CF;
-  --clr-lightgrey: #C0C0C0;
-  --clr-darkgrey: #939597;
+  --color-dark-1: #111111;
+  --color-dark-2: #262626;
+  --color-dark-3: #333333;
+  --color-dark-4: #555555;
+  --color-light-1: #f1e9db;
+  --color-light-2: #eeece6;
+  --color-light-3: #f2f1ed;
+  --color-light-4: #f7f6f3;
+  --color-gray-1: #888888;
+  --color-gray-2: #cccccc;
   /* Typography */
   --ff-body: "Nunito Sans";
   --ff-heading: "Butler";
@@ -422,7 +425,7 @@ header h1 {
   text-align: center;
 }
 header h2 {
-  color: var(--clr-accent);
+  color: var(--color-dark-4);
 }
 
 .desktopNav {
@@ -442,20 +445,24 @@ header h2 {
   gap: 2rem;
 }
 .navLinks a {
-  color: var(--clr-white);
+  color: var(--color-dark-3);
 }
 
 footer {
   text-align: center;
-  text-transform: uppercase;
   padding: 0.5rem;
+}
+footer .copyright {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-dark-1);
 }
 
 /* =========================
  * GENERAL (APPLIES TO ALL SECTIONS)
  * ======================== */
 section {
-  border-top: 2px solid var(--clr-darkgrey);
+  border-top: 2px solid var(--color-gray-1);
   padding: 5rem 0;
 }
 
@@ -467,7 +474,7 @@ section {
  * ABOUT SECTION
  * ======================== */
 .about {
-  background-color: var(--clr-lightblack);
+  background-color: var(--color-light-2);
 }
 
 .aboutSection {
@@ -542,9 +549,9 @@ section {
   font-size: 0.8rem;
   font-weight: 700;
   line-height: 1.6rem;
-  border: 2px solid var(--clr-accent);
-  background-color: var(--clr-accent);
-  color: var(--clr-lightblack);
+  border: 2px solid var(--color-dark-4);
+  background-color: var(--color-dark-4);
+  color: var(--color-light-2);
   text-align: center;
   padding: 0.4rem 0.7rem;
   border-radius: 25px;
@@ -554,7 +561,7 @@ section {
  * PROJECTS SECTION
  * ======================== */
 .projects {
-  background-color: var(--clr-lighterblack);
+  background-color: var(--color-light-3);
 }
 
 .projectsSection {
@@ -585,21 +592,19 @@ section {
 @media screen and (max-width: 1000px) {
   .projectScreenshot {
     display: block;
-    border: 0.15rem solid var(--clr-lightgrey);
+    border: 0.15rem solid var(--color-dark-3);
   }
 }
 
 .projectDemo .projectVideo {
   width: 100%;
-  border: 0.15rem solid var(--clr-lightgrey);
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
+  border: 2px solid var(--color-dark-3);
+  opacity: 0.85;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .projectDemo .projectVideo:hover {
-  -webkit-filter: brightness(100%);
-          filter: brightness(100%);
+  opacity: 1;
 }
 @media screen and (max-width: 1000px) {
   .projectDemo .projectVideo {
@@ -609,6 +614,10 @@ section {
 
 .projectLinks {
   margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .projectDetails {
@@ -646,11 +655,17 @@ section {
   margin-top: 1rem;
 }
 
+.linkBtn {
+  text-transform: uppercase;
+  color: var(--color-dark-3);
+  font-weight: 700;
+}
+
 /* =========================
  * CONTACT SECTION
  * ======================== */
 .contact {
-  background-color: var(--clr-lightblack);
+  background-color: var(--color-light-2);
 }
 .contact .wrapper {
   display: -webkit-box;
@@ -720,18 +735,18 @@ section {
   line-height: 3.2rem;
   cursor: pointer;
   background-color: transparent;
-  color: var(--clr-white);
+  color: var(--color-dark-3);
   border: none;
   font-weight: 400;
 }
 .clickToCopyBtn:hover, .clickToCopyBackup:hover {
-  color: var(--clr-accent);
+  color: var(--color-dark-4);
 }
 
 .clickToCopyBtn + span {
   display: none;
   margin-left: 1rem;
-  background: var(--clr-lighterblack);
+  background: var(--color-light-3);
   padding: 0.5rem;
   border-radius: 0.2rem;
   position: absolute;
@@ -739,7 +754,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.4px;
   font-weight: 400;
-  color: var(--clr-accent);
+  color: var(--color-dark-4);
   width: 80px;
   top: 0.5rem;
 }
@@ -754,7 +769,7 @@ section {
   position: absolute;
   pointer-events: none;
   border-color: rgba(218, 218, 218, 0);
-  border-right-color: var(--clr-lighterblack);
+  border-right-color: var(--color-light-3);
   border-width: 10px;
   margin-top: -5px;
 }
@@ -785,15 +800,15 @@ section {
 .socialIcon {
   font-size: 1.2rem;
   padding: 1rem;
-  border: 2px solid var(--clr-darkgrey);
+  border: 2px solid var(--color-gray-1);
   border-radius: 50%;
-  color: var(--clr-white);
+  color: var(--color-dark-3);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .socialIcon:hover, .socialIcon:focus {
-  border-color: var(--clr-accent);
-  color: var(--clr-accent);
+  border-color: var(--color-dark-4);
+  color: var(--color-dark-4);
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -816,10 +831,10 @@ section {
   background: transparent;
   border: 0;
   outline: none;
-  border-bottom: 2px solid var(--clr-darkgrey);
+  border-bottom: 2px solid var(--color-gray-1);
   margin-bottom: 3rem;
   padding: 0.5rem 0.25rem;
-  color: var(--clr-white);
+  color: var(--color-dark-3);
   width: 100%;
   -webkit-transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -829,9 +844,9 @@ section {
 .contactForm input:-webkit-autofill:hover,
 .contactForm input:-webkit-autofill:focus,
 .contactForm input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px var(--clr-lightblack) inset !important;
-          box-shadow: 0 0 0 30px var(--clr-lightblack) inset !important;
-  -webkit-text-fill-color: var(--clr-white) !important;
+  -webkit-box-shadow: 0 0 0 30px var(--color-light-2) inset !important;
+          box-shadow: 0 0 0 30px var(--color-light-2) inset !important;
+  -webkit-text-fill-color: var(--color-dark-3) !important;
 }
 .contactForm .formRow {
   position: relative;
@@ -840,7 +855,7 @@ section {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.6rem;
-  color: var(--clr-darkgrey);
+  color: var(--color-gray-1);
   position: absolute;
   left: 0;
   top: 0.2rem;
@@ -856,8 +871,8 @@ section {
 .contactForm .inputLabelFocused {
   -webkit-transform: scale(0.85) translateY(-1.7rem);
           transform: scale(0.85) translateY(-1.7rem);
-  color: var(--clr-white);
+  color: var(--color-dark-3);
 }
 .contactForm .formInputFocused {
-  border-color: var(--clr-white);
+  border-color: var(--color-dark-3);
 }

@@ -39,8 +39,8 @@ html {
 
 body {
     font-family: var(--ff-body), sans-serif;
-    background-color: var(--clr-black);
-    color: var(--clr-white);
+    background-color: var(--color-light-4);
+    color: var(--color-dark-3);
     font-weight: 300;
 }
 
@@ -89,7 +89,7 @@ h4 {
  * ======================== */
 
  .button, .submitBtn {
-    @include buttonStyle;
+    @include borderButtonStyle;
  }
 
  /* =========================
@@ -100,7 +100,7 @@ h4 {
 .smallCaps {
     font-family: var(--ff-body), sans-serif;
     text-transform: uppercase;
-    color: var(--clr-lightgrey);
+    color: var(--color-dark-3);
     font-weight: 700;
     font-size: 0.6rem;
     line-height: 0.8rem;
@@ -110,7 +110,7 @@ h4 {
 // Accent text
 .accentText {
     font-family: var(--ff-body), sans-serif;
-    color: var(--clr-accent);
+    color: var(--color-dark-4);
     font-weight: 700;
     font-size: 1.2rem;
     line-height: 1.6rem;

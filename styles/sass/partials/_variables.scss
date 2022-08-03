@@ -1,11 +1,23 @@
 :root {
-    --clr-white: #FFFFFF;
-    --clr-black: #1B1A18;
-    --clr-lightblack: #20211F;
-    --clr-lighterblack: #313130;
-    --clr-accent: #FDF9CF;
-    --clr-lightgrey: #C0C0C0;
-    --clr-darkgrey: #939597;
+    // dark mode
+    // --clr-white: #FFFFFF; replaced by --color-dark-3
+    // --clr-black: #1B1A18; replaced by --color-light-4
+    // --clr-lightblack: #20211F; replaced by --color-light-2
+    // --clr-lighterblack: #313130; replaced by --color-light-3
+    // --clr-accent: #FDF9CF; replaced by --color-dark-4
+    // --clr-lightgrey: #C0C0C0; replaced by --color-dark-3
+    // --clr-darkgrey: #939597; replaced by --color-gray-1
+
+    --color-dark-1: #111111;
+    --color-dark-2: #262626;
+    --color-dark-3: #333333;
+    --color-dark-4: #555555;
+    --color-light-1: #f1e9db;
+    --color-light-2: #eeece6;
+    --color-light-3: #f2f1ed;
+    --color-light-4: #f7f6f3;
+    --color-gray-1: #888888;
+    --color-gray-2: #cccccc;
 
     /* Typography */
     --ff-body: 'Nunito Sans';
