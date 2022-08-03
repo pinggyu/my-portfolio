@@ -40,10 +40,10 @@
                 <h3 class="sectionTitle">About</h3>
                 <div class="aboutSection">
                     <div class="introSubsection">
-                        <h4>Hi, I'm Ping ⎯ a web developer specializing in frontend.</h4>
+                        <h4>Hi, I'm Ping ⎯ a web developer based in Toronto, Canada.</h4>
                         <p>I'm passionate about building responsive and accessible web applications to create great user experiences. Previously, I was working at a large consulting firm as a CPA and I also have experience working in bizops for an early stage tech startup.
                         <p>In my free time, I enjoy staying active, traveling and creating social media content for various brands (like Nintendo, Visa, Hudson's Bay and more)! </p>
-                        <button>View Resume</button>                        
+                        <button class="button">View Resume →</button>                        
                     </div>
                     <div class="skillsSubsection">
                         <h4>Toolkit/Skills</h4>
@@ -74,10 +74,11 @@
                 <ul class="projectsSection">
                 <!-- Project 1 -->
                     <li class="projectDemo">
-                        <video>
+                        <video class="projectVideo">
                             <source src="./assets/images/jobseekr.mov" loop muted="muted">
                             Your browser does not support the HTML5 video element.
                         </video>
+                        <img src="./assets/images/JobSeekrScreenshot.png" class="projectScreenshot" alt="Screenshot of the JobSeekr website">
                     </li>                        
                     <li class="projectDetails">
                         <div class="projectText">
@@ -92,8 +93,8 @@
                             </ul>
                         </div>
                         <div class="projectLinks">
-                            <a href="https://jobseekr.netlify.app/">Live Site</a>
-                            <a href="https://github.com/ping-ryan/jobseekr">View Code</a>
+                            <a href="https://jobseekr.netlify.app/" class="button">Live Site</a>
+                            <a href="https://github.com/ping-ryan/jobseekr" class="button">View Code</a>
                         </div>
                     </li>
                 <!-- Project 2 -->
@@ -110,19 +111,20 @@
                             </ul>
                         </div>
                         <div class="projectLinks">
-                            <a href="https://willowblog.netlify.app/">Live Site</a>
-                            <a href="https://github.com/pinggyu/ping-yu-project-one">View Code</a>
+                            <a href="https://willowblog.netlify.app/" class="button">Live Site</a>
+                            <a href="https://github.com/pinggyu/ping-yu-project-one" class="button">View Code</a>
                         </div>
                     </li>
                     <li class="projectDemo">
-                        <video>
+                        <video class="projectVideo">
                             <source src="./assets/images/willow.mov" loop muted="muted">
                             Your browser does not support the HTML5 video element.
                         </video>
+                        <img src="./assets/images/WillowScreenshot.png" class="projectScreenshot" alt="Screenshot of the Willow Blog website">
                     </li>
                 </ul>
                 <div class="viewMore">
-                    <a href="https://github.com/pinggyu">View More →</a>
+                    <a href="https://github.com/pinggyu" class="button">View More →</a>
                 </div>
             </div>
         </section>
@@ -134,7 +136,13 @@
                     <div class="emailSocialsContainer">
                         <div class="emailContainer">
                             <p class="smallCaps">E-Mail</p>
-                            <p class="email">pingyuuu@gmail.com</p>
+                            <div class="clickToCopyContainer">
+                                <button class="email clickToCopyBtn" id="clickToCopyBtn" title="Click to Copy">pingyuuu@gmail.com</button>
+                                <span>Copied</span>
+                            </div>
+                            <a href="mailto:pingyuuu@gmail.com" class="clickToCopyBackup">
+                            pingyuuu@gmail.com
+                            </a>
                         </div>
                         <div class="socials">
                             <p class="smallCaps">Find me on</p>
@@ -188,7 +196,7 @@
 
     </main>
     <footer>
-        Ⓒ 2022 Ping Yu 
+        Ⓒ Copyright 2022 - Ping Yu 
     </footer>
 </body>
 </html>

@@ -272,13 +272,13 @@ h6 {
 }
 
 h1 {
-  font-size: 8.5rem;
+  font-size: clamp(4rem, 9vw, 8.5rem);
   font-weight: 250;
   letter-spacing: 0.5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
 }
 
 h3 {
@@ -293,7 +293,7 @@ h4 {
 /* =========================
  * Links & buttons
  * ======================== */
-button, input[type=submit] {
+.button, .submitBtn {
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -309,7 +309,7 @@ button, input[type=submit] {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-button:hover, input[type=submit]:hover {
+.button:hover, .submitBtn:hover {
   border: 2px solid var(--clr-accent);
   background-color: var(--clr-accent);
   color: var(--clr-lighterblack);
@@ -418,6 +418,9 @@ header .headerText {
       -ms-flex-align: center;
           align-items: center;
 }
+header h1 {
+  text-align: center;
+}
 header h2 {
   color: var(--clr-accent);
 }
@@ -472,17 +475,17 @@ section {
   display: -ms-flexbox;
   display: flex;
   gap: 4rem;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
-@media (min-width: 1125px) {
+@media screen and (max-width: 1125px) {
   .aboutSection {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -553,51 +556,40 @@ section {
 .projects {
   background-color: var(--clr-lighterblack);
 }
-.projects a {
-  font-family: var(--ff-body), sans-serif;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 1.6rem;
-  border: 2px solid var(--clr-white);
-  cursor: pointer;
-  background-color: transparent;
-  color: var(--clr-white);
-  text-align: center;
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.projects a:hover {
-  border: 2px solid var(--clr-accent);
-  background-color: var(--clr-accent);
-  color: var(--clr-lighterblack);
-}
 
 .projectsSection {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   padding-top: 2rem;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
 }
-@media (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .projectsSection {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 100%;
   }
 }
 
 .hoverMsg {
-  display: none;
+  display: block;
 }
-@media (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .hoverMsg {
-    display: block;
+    display: none;
   }
 }
 
-.projectDemo video {
+.projectScreenshot {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .projectScreenshot {
+    display: block;
+    border: 0.15rem solid var(--clr-lightgrey);
+  }
+}
+
+.projectDemo .projectVideo {
   width: 100%;
   border: 0.15rem solid var(--clr-lightgrey);
   -webkit-filter: brightness(50%);
@@ -605,9 +597,14 @@ section {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.projectDemo video:hover {
+.projectDemo .projectVideo:hover {
   -webkit-filter: brightness(100%);
           filter: brightness(100%);
+}
+@media screen and (max-width: 1000px) {
+  .projectDemo .projectVideo {
+    display: none;
+  }
 }
 
 .projectLinks {
@@ -642,7 +639,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .projectSummary {
@@ -677,20 +674,20 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 50%;
 }
-@media (min-width: 1125px) {
+@media screen and (max-width: 1125px) {
   .emailSocialsContainer {
-    width: 50%;
+    width: 100%;
   }
 }
 
 .contactFormContainer {
-  width: 100%;
+  width: 50%;
 }
-@media (min-width: 1125px) {
+@media screen and (max-width: 1125px) {
   .contactFormContainer {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -699,31 +696,90 @@ section {
   display: -ms-flexbox;
   display: flex;
   gap: 3rem;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
-@media (min-width: 1125px) {
+@media screen and (max-width: 1125px) {
   .contactSection {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
+.clickToCopyContainer {
+  position: relative;
+}
+
+.clickToCopyBtn, .clickToCopyBackup {
+  font-family: var(--ff-heading), serif;
+  font-size: clamp(0.5rem, 9vw, 2.7rem);
+  line-height: 3.2rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--clr-white);
+  border: none;
+  font-weight: 400;
+}
+.clickToCopyBtn:hover, .clickToCopyBackup:hover {
+  color: var(--clr-accent);
+}
+
+.clickToCopyBtn + span {
+  display: none;
+  margin-left: 1rem;
+  background: var(--clr-lighterblack);
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  color: var(--clr-accent);
+  width: 80px;
+  top: 0.5rem;
+}
+
+.clickToCopyBtn + span:after {
+  left: -18px;
+  bottom: 25%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(218, 218, 218, 0);
+  border-right-color: var(--clr-lighterblack);
+  border-width: 10px;
+  margin-top: -5px;
+}
+
+.clickToCopyBtn.isCopied + span {
+  display: initial;
+}
+
+.clickToCopyBackup {
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .clickToCopyBtn {
+    display: none;
+  }
+  .clickToCopyBackup {
+    display: block;
+  }
+}
 .socialLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
-}
-
-.email {
-  font-family: var(--ff-heading), serif;
-  font-size: clamp(0.5rem, 9vw, 2.7rem);
-  line-height: 3.2rem;
 }
 
 .socialIcon {

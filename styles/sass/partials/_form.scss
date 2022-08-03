@@ -1,0 +1,60 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+
+    .submitBtn {
+        align-self: center;
+        margin-top: 1rem;
+    }
+
+    .formInput {
+        background: transparent;
+        border: 0;
+        outline: none;
+        border-bottom: 2px solid var(--clr-darkgrey);
+        margin-bottom: 3rem;
+        padding: 0.5rem 0.25rem;
+        color: var(--clr-white);
+        width: 100%;
+        transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        font-family: var(--ff-body), sans-serif;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        box-shadow: 0 0 0 30px var(--clr-lightblack) inset !important;
+        -webkit-text-fill-color: var(--clr-white) !important;
+    }
+
+    .formRow {
+        position: relative;
+    }
+
+    .inputLabel {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        color: var(--clr-darkgrey);
+        position: absolute;
+        left: 0;
+        top: 0.2rem;
+        display: block;
+        margin: auto;
+        transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        transform-origin: left center;
+        cursor: text;
+        pointer-events: none;
+    }
+
+    .inputLabelFocused {
+        transform: scale(0.85) translateY(-1.7rem);
+        color: var(--clr-white);
+    }
+
+    .formInputFocused {
+        border-color: var(--clr-white);
+    }
+
+}

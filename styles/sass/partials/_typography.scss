@@ -66,13 +66,13 @@ h6 {
 }
 
 h1 {
-    font-size: 8.5rem;
+    font-size: clamp(4rem, 9vw, 8.5rem);
     font-weight: 250;
     letter-spacing: 0.5rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: clamp(0.8rem, 5vw, 1.5rem);
 }
 
 h3 {
@@ -88,7 +88,7 @@ h4 {
  * Links & buttons
  * ======================== */
 
- button, input[type="submit"] {
+ .button, .submitBtn {
     @include buttonStyle;
  }
 

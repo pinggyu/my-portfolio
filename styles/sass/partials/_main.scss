@@ -22,9 +22,9 @@ section {
 .aboutSection {
     display: flex;
     gap: 4rem;
-    flex-direction: column;
-    @media (min-width: 1125px) {
-        flex-direction: row;
+    flex-direction: row;
+    @media screen and (max-width: 1125px) {
+        flex-direction: column;
     }
 }
 
@@ -68,37 +68,45 @@ section {
 
 .projects {
     background-color: var(--clr-lighterblack);
-    a {
-        @include buttonStyle;
-    }
 }
 
 .projectsSection {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
     padding-top: 2rem;
-    grid-gap: 2rem;
-        @media (min-width: 1000px) {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-        }
+    grid-gap: 3rem;
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 100%;
+    }
 }
 
 .hoverMsg {
+    display: block;
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+}
+
+.projectScreenshot {
     display: none;
-        @media (min-width: 1000px) {
-            display: block;
-        }
+    @media screen and (max-width: 1000px) {
+        display: block;
+        border: 0.15rem solid var(--clr-lightgrey);
+    }
 }
 
 .projectDemo {
-    video {
+    .projectVideo {
         width: 100%;
         border: 0.15rem solid var(--clr-lightgrey);
         filter: brightness(50%);
         transition: 0.3s;
         &:hover {
             filter: brightness(100%);
+        }
+        @media screen and (max-width: 1000px) {
+            display: none;
         }
     }
 }
@@ -124,7 +132,7 @@ section {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .projectSummary {
@@ -150,41 +158,106 @@ section {
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    width: 100%;
-    @media (min-width: 1125px) {
-        width: 50%;
+    width: 50%;
+    @media screen and (max-width: 1125px) {
+        width: 100%;
     }
 }
 
 .contactFormContainer {
-    width: 100%;
-    @media (min-width: 1125px) {
-        width: 50%;
+    width: 50%;
+    @media screen and (max-width: 1125px) {
+        width: 100%;
     }
 }
 
 .contactSection {
     display: flex;
     gap: 3rem;
-    flex-direction: column;
-    @media (min-width: 1125px) {
-        flex-direction: row;
+    flex-direction: row;
+    @media screen and (max-width: 1125px) {
+        flex-direction: column;
     }
 }
 
-// Email & Socials section
+// Email copy to clipboard (adapted from https://codepen.io/imjuangarcia/pen/xxRaqMZ)
 
+.clickToCopyContainer {
+    position: relative;
+}
+
+.clickToCopyBtn, .clickToCopyBackup {
+    font-family: var(--ff-heading), serif;
+    font-size: clamp(0.5rem, 9vw, 2.7rem);
+    line-height: 3.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--clr-white);
+    border: none;
+    font-weight: 400;
+    &:hover {
+        color: var(--clr-accent);
+    }
+}
+
+.clickToCopyBtn + span {
+    display: none;
+    margin-left: 1rem;
+    background: var(--clr-lighterblack);
+    padding: .5rem;
+    border-radius: .2rem;
+    position: absolute;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    font-weight: 400;
+    color: var(--clr-accent);
+    width: 80px;
+    top: 0.5rem;
+}
+
+.clickToCopyBtn + span:after {
+    left: -18px;
+    bottom: 25%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(218, 218, 218, 0);
+    border-right-color: var(--clr-lighterblack);
+    border-width: 10px;
+    margin-top: -5px;
+}
+
+.clickToCopyBtn.isCopied + span {
+    display: initial;
+}
+
+.clickToCopyBackup {
+    display: none;
+}
+
+@media screen and (max-width: 1400px) {
+
+    .clickToCopyBtn {
+        display: none;
+    }
+
+    .clickToCopyBackup {
+        display: block;
+    }
+}
+
+// Socials
+ 
 .socialLinks {
     display: flex;
     gap: 2rem;
 }
 
-.email {
-    font-family: var(--ff-heading), serif;
-    font-size: clamp(0.5rem, 9vw, 2.7rem);
-    line-height: 3.2rem;
-}
- 
+
 .socialIcon {
     font-size: 1.2rem;
     padding: 1rem;
@@ -198,60 +271,4 @@ section {
         color: var(--clr-accent);
         transform: scale(1.2)
     }
-}
-
-//  Form section
-
-.contactForm {
-    display: flex;
-    flex-direction: column;
-    .submitBtn {
-        align-self: center;
-        margin-top: 1rem;
-    }
-    .formInput {
-        background: transparent;
-        border: 0;
-        outline: none;
-        border-bottom: 2px solid var(--clr-darkgrey);
-        margin-bottom: 3rem;
-        padding: 0.5rem 0.25rem;
-        color: var(--clr-white);
-        width: 100%;
-        transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-        font-family: var(--ff-body), sans-serif;
-    }
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus,
-    input:-webkit-autofill:active {
-        box-shadow: 0 0 0 30px var(--clr-lightblack) inset !important;
-        -webkit-text-fill-color: var(--clr-white) !important;
-    }
-    .formRow {
-        position: relative;
-    }
-    .inputLabel {
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.6rem;
-        color: var(--clr-darkgrey);
-        position: absolute;
-        left: 0;
-        top: 0.2rem;
-        display: block;
-        margin: auto;
-        transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-        transform-origin: left center;
-        cursor: text;
-        pointer-events: none;
-    }
-    .inputLabelFocused {
-        transform: scale(0.85) translateY(-1.7rem);
-        color: var(--clr-white);  
-    }
-    .formInputFocused {
-        border-color: var(--clr-white);
-    }
-
 }

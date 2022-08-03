@@ -12,7 +12,11 @@ demos.forEach((demo) => {
     });
 })
 
-// CONTACT FORM 
+/* ===============================================
+ * CONTACT SECTION
+ * ==============================================*/
+
+// Form labels animation
 
 const formInputs = document.querySelectorAll('.formInput')
 
@@ -30,3 +34,29 @@ formInputs.forEach((formInput) => {
         }
     })
 })
+
+// Email click to copy
+
+const copyButton = document.getElementById('clickToCopyBtn');
+
+const clickToCopy = (e) => {
+  e.preventDefault();
+  copyToClipboard(e.currentTarget.textContent);
+  e.target.classList.add('isCopied');
+  setTimeout(() => { e.target.classList.remove('isCopied') }, 1200);
+}
+
+// Copy to clipboard function, taken from https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript/
+// Clipboard API replaces the old document.execCommand()
+
+const copyToClipboard = str => {
+  if (navigator && navigator.clipboard && navigator.clipboard.writeText)
+    return navigator.clipboard.writeText(str);
+  return Promise.reject('The Clipboard API is not available.');
+};
+
+// Fire the event on click
+copyButton.addEventListener('click', clickToCopy);
+
+
+
