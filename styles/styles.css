@@ -278,7 +278,8 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(0.8rem, 5vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 300;
 }
 
 h3 {
@@ -659,6 +660,7 @@ section {
   text-transform: uppercase;
   color: var(--color-dark-3);
   font-weight: 700;
+  line-height: 2rem;
 }
 
 /* =========================
@@ -740,13 +742,13 @@ section {
   font-weight: 400;
 }
 .clickToCopyBtn:hover, .clickToCopyBackup:hover {
-  color: var(--color-dark-4);
+  color: var(--color-gray-1);
 }
 
 .clickToCopyBtn + span {
   display: none;
   margin-left: 1rem;
-  background: var(--color-light-3);
+  background: var(--color-gray-1);
   padding: 0.5rem;
   border-radius: 0.2rem;
   position: absolute;
@@ -754,7 +756,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.4px;
   font-weight: 400;
-  color: var(--color-dark-4);
+  color: var(--color-light-1);
   width: 80px;
   top: 0.5rem;
 }
@@ -769,7 +771,7 @@ section {
   position: absolute;
   pointer-events: none;
   border-color: rgba(218, 218, 218, 0);
-  border-right-color: var(--color-light-3);
+  border-right-color: var(--color-gray-1);
   border-width: 10px;
   margin-top: -5px;
 }
@@ -875,4 +877,35 @@ section {
 }
 .contactForm .formInputFocused {
   border-color: var(--color-dark-3);
+}
+
+.hoverUnderline {
+  display: inline-block;
+  position: relative;
+  color: var(--color-dark-3);
+}
+
+.hoverUnderline:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-dark-3);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.hoverUnderline:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
