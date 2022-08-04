@@ -1,4 +1,4 @@
-// hover underline animation from https: //www.30secondsofcode.org/css/s/hover-underline-animation 
+// hover underline animation adapted from https: //www.30secondsofcode.org/css/s/hover-underline-animation 
 .hoverUnderline {
     display: inline-block;
     position: relative;
@@ -21,4 +21,45 @@
 .hoverUnderline:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+// button hover animation, adapted from https: //artemsemkin.com/rhye/html/page-inner-services-1.html
+
+.linkButton {
+    position: relative;
+    transition: all .2s cubic-bezier(.785, .135, .15, .86);
+}
+
+.linkButton[data-hover]:before {
+    content: attr(data-hover);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition: all .2s cubic-bezier(.785, .135, .15, .86);
+    opacity: 0;
+    visibility: hidden;
+}
+.linkButton[data-hover]:hover {
+    .buttonHover {
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    &:before {
+        color: white;
+        transform: translateY(-50%);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.buttonHover {
+    display: block;
+    transform: translateY(0);
+    transition: all .2s cubic-bezier(.785, .135, .15, .86);
+    opacity: 1;
+    visibility: visible;
 }

@@ -6,17 +6,12 @@
     line-height: 1.6rem;
     border: 2px solid var(--color-dark-3);
     cursor: pointer;
-    background-color: transparent;
-    color: var(--color-dark-3);
+    background-color: var(--color-dark-3);
+    color: var(--color-light-2);
     text-align: center;
     padding: 1rem 1.5rem;
     border-radius: 50px;
     transition: 0.3s;
-    &:hover {
-        border: 2px solid var(--color-dark-4);
-        background-color: var(--color-dark-4);
-        color: var(--color-light-3)
-    }
 }
 
 @mixin linkStyle {
@@ -31,9 +26,9 @@
     font-size: 0.8rem;
     font-weight: 700;
     line-height: 1.6rem;
-    border: 2px solid var(--color-dark-4);
-    background-color: var(--color-dark-4);
-    color: var(--color-light-2);
+    border: 2px solid var(--color-dark-3);
+    background-color: transparent;
+    color: var(--color-dark-3);
     text-align: center;
     padding: 0.4rem 0.7rem;
     border-radius: 25px;

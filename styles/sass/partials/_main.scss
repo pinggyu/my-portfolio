@@ -78,6 +78,9 @@ section {
     grid-gap: 3rem;
     @media screen and (max-width: 1000px) {
         grid-template-columns: 100%;
+        >li:nth-of-type(4) {
+            grid-row-start: 3;
+        }
     }
 }
 
@@ -124,10 +127,10 @@ section {
 }
 
 .projectToolsList {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
     margin-top: 2rem;
-    li {
-        display: inline;
-    }
 }
 
 .viewMore {
@@ -135,6 +138,9 @@ section {
     width: 100%;
     justify-content: center;
     margin-top: 4rem;
+    a {
+        @include borderButtonStyle;
+    }
 }
 
 .projectSummary {
@@ -260,17 +266,22 @@ section {
  
 .socialLinks {
     display: flex;
-    gap: 2rem;
+    gap: clamp(0.1rem, 5vw, 2rem);
 }
 
 
 .socialIcon {
     font-size: 1.2rem;
-    padding: 1rem;
+    padding: clamp(0.1rem, 8vw, 1.7rem);
     border: 2px solid var(--color-gray-1);
     border-radius: 50%;
     color: var(--color-dark-3);
     transition: 0.3s;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &:hover,
     &:focus{
         border-color: var(--color-dark-4);

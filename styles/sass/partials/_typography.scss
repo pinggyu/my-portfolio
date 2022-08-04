@@ -56,7 +56,6 @@ h3 {
 }
 
 .logo,
-h2,
 h4,
 h5,
 h6 {
@@ -67,13 +66,14 @@ h6 {
 
 h1 {
     font-size: clamp(4rem, 9vw, 8.5rem);
-    font-weight: 250;
-    letter-spacing: 0.5rem;
+    font-weight: 300;
 }
 
 h2 {
+    font-family: var(--ff-body), sans-serif;
     font-size: clamp(1rem, 3vw, 1.5rem);
-    font-weight: 300;
+    text-transform: capitalize;
+    font-weight: 400;
 }
 
 h3 {
@@ -101,7 +101,7 @@ h4 {
 .smallCaps {
     font-family: var(--ff-body), sans-serif;
     text-transform: uppercase;
-    color: var(--color-dark-3);
+    color: var(--color-gray-1);
     font-weight: 700;
     font-size: 0.6rem;
     line-height: 0.8rem;

@@ -5,6 +5,10 @@
     .submitBtn {
         align-self: center;
         margin-top: 1rem;
+        span {
+            z-index: 10;
+            position: relative;
+        }
     }
 
     .formInput {

@@ -1,4 +1,40 @@
-// PROJECT DEMO VIDEOS
+/* ===============================================
+ * HEADER SECTION
+ * ==============================================*/
+
+// Mobile slide-out navigation & disable scroll when menu modal is open
+const menuBtn = document.getElementById('menuBtn');
+const closeBtn = document.getElementById('closeBtn');
+const mobileNav = document.getElementById('mobileNavContainer');
+const body = document.querySelector("body");
+let mobileNavOpen = false;
+
+const showMobileNav = (e) => {
+    if (!mobileNavOpen){
+        mobileNav.style.transform = "translateX(0%)";
+        menuBtn.removeEventListener('click', showMobileNav);
+        mobileNavOpen = true;
+        body.style.overflow = "hidden";
+    }
+}
+
+const hideMobileNav = (e) => {
+    if (mobileNavOpen){
+        mobileNav.style.transform = "translateX(100%)";
+        mobileNavOpen = false;   
+        menuBtn.addEventListener('click', showMobileNav);
+        body.style.overflow = "auto";     
+    }
+}
+
+menuBtn.addEventListener('click', showMobileNav);
+closeBtn.addEventListener('click', hideMobileNav);
+
+/* ===============================================
+ * PROJECTS SECTION
+ * ==============================================*/
+
+// Play project demos on hover
 
 const demos = document.querySelectorAll('video')
 

@@ -262,7 +262,6 @@ h3 {
 }
 
 .logo,
-h2,
 h4,
 h5,
 h6 {
@@ -273,13 +272,14 @@ h6 {
 
 h1 {
   font-size: clamp(4rem, 9vw, 8.5rem);
-  font-weight: 250;
-  letter-spacing: 0.5rem;
+  font-weight: 300;
 }
 
 h2 {
+  font-family: var(--ff-body), sans-serif;
   font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 300;
+  text-transform: capitalize;
+  font-weight: 400;
 }
 
 h3 {
@@ -302,18 +302,13 @@ h4 {
   line-height: 1.6rem;
   border: 2px solid var(--color-dark-3);
   cursor: pointer;
-  background-color: transparent;
-  color: var(--color-dark-3);
+  background-color: var(--color-dark-3);
+  color: var(--color-light-2);
   text-align: center;
   padding: 1rem 1.5rem;
   border-radius: 50px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-.button:hover, .submitBtn:hover {
-  border: 2px solid var(--color-dark-4);
-  background-color: var(--color-dark-4);
-  color: var(--color-light-3);
 }
 
 /* =========================
@@ -322,7 +317,7 @@ h4 {
 .smallCaps {
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
-  color: var(--color-dark-3);
+  color: var(--color-gray-1);
   font-weight: 700;
   font-size: 0.6rem;
   line-height: 0.8rem;
@@ -391,9 +386,16 @@ html {
   scroll-behavior: smooth;
 }
 
-/* =========================
- * Navigation
- * ======================== */
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
 header {
   min-height: 100vh;
   display: -webkit-box;
@@ -421,6 +423,7 @@ header .headerText {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 header h1 {
   text-align: center;
@@ -429,6 +432,9 @@ header h2 {
   color: var(--color-dark-4);
 }
 
+/* =========================
+ * Navigation
+ * ======================== */
 .desktopNav {
   padding: 2rem 0;
   display: -webkit-box;
@@ -437,6 +443,9 @@ header h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navLinks {
@@ -447,6 +456,102 @@ header h2 {
 }
 .navLinks a {
   color: var(--color-dark-3);
+}
+
+@media (max-width: 800px) {
+  .desktopNav {
+    display: none;
+  }
+}
+
+.mobileNavContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-light-4);
+  z-index: 30;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+@media (max-width: 800px) {
+  .mobileNavContainer {
+    display: block;
+  }
+}
+
+.mobileNavLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+.mobileNavLinks li a {
+  font-family: var(--ff-heading), serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.7rem;
+  line-height: 3.2rem;
+  text-align: center;
+  color: var(--color-dark-3);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.mobileNavLinks li a:hover {
+  color: var(--color-gray-1);
+}
+
+.closeBtn svg {
+  position: absolute;
+  width: 80px;
+  right: 20px;
+  top: 10px;
+  z-index: 40;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menuBtn {
+  display: none;
+}
+.menuBtn svg {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  z-index: 20;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (max-width: 800px) {
+  .menuBtn {
+    display: block;
+  }
+}
+
+.scrollDownIcon {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+@media (max-width: 800px) {
+  .scrollDownIcon {
+    display: none;
+  }
 }
 
 footer {
@@ -550,9 +655,9 @@ section {
   font-size: 0.8rem;
   font-weight: 700;
   line-height: 1.6rem;
-  border: 2px solid var(--color-dark-4);
-  background-color: var(--color-dark-4);
-  color: var(--color-light-2);
+  border: 2px solid var(--color-dark-3);
+  background-color: transparent;
+  color: var(--color-dark-3);
   text-align: center;
   padding: 0.4rem 0.7rem;
   border-radius: 25px;
@@ -575,6 +680,9 @@ section {
 @media screen and (max-width: 1000px) {
   .projectsSection {
     grid-template-columns: 100%;
+  }
+  .projectsSection > li:nth-of-type(4) {
+    grid-row-start: 3;
   }
 }
 
@@ -635,10 +743,13 @@ section {
 }
 
 .projectToolsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 2rem;
-}
-.projectToolsList li {
-  display: inline;
 }
 
 .viewMore {
@@ -650,6 +761,22 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 4rem;
+}
+.viewMore a {
+  font-family: var(--ff-body), sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  border: 2px solid var(--color-dark-3);
+  cursor: pointer;
+  background-color: var(--color-dark-3);
+  color: var(--color-light-2);
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .projectSummary {
@@ -796,17 +923,28 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2rem;
+  gap: clamp(0.1rem, 5vw, 2rem);
 }
 
 .socialIcon {
   font-size: 1.2rem;
-  padding: 1rem;
+  padding: clamp(0.1rem, 8vw, 1.7rem);
   border: 2px solid var(--color-gray-1);
   border-radius: 50%;
   color: var(--color-dark-3);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .socialIcon:hover, .socialIcon:focus {
   border-color: var(--color-dark-4);
@@ -828,6 +966,10 @@ section {
   -ms-flex-item-align: center;
       align-self: center;
   margin-top: 1rem;
+}
+.contactForm .submitBtn span {
+  z-index: 10;
+  position: relative;
 }
 .contactForm .formInput {
   background: transparent;
@@ -908,4 +1050,49 @@ section {
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
+}
+
+.linkButton {
+  position: relative;
+  -webkit-transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.linkButton[data-hover]:before {
+  content: attr(data-hover);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.linkButton[data-hover]:hover .buttonHover {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+.linkButton[data-hover]:hover:before {
+  color: white;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.buttonHover {
+  display: block;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  opacity: 1;
+  visibility: visible;
 }
