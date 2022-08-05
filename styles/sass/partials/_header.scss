@@ -33,9 +33,6 @@ header {
     bottom: 50px;
     cursor: pointer;
     transition: 0.3s;
-    // &:hover {
-    //     transform: scale(0.8);
-    // }
     @media (max-width: 800px) {
         display: none;
     }
@@ -147,7 +144,8 @@ h1:after {
         text-align: center;
         color: var(--color-dark-3);
         transition: 0.3s;
-        &:hover{
+        &:hover,
+        &:focus {
             color: var(--color-gray-1);
         }
     }

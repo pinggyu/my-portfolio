@@ -105,7 +105,8 @@ section {
         border: 2px solid var(--color-dark-3);
         opacity: 0.85;
         transition: 0.3s;
-        &:hover {
+        &:hover,
+        &:focus {
             opacity: 1;
         }
         @media screen and (max-width: 1000px) {
@@ -211,7 +212,8 @@ section {
     color: var(--color-dark-3);
     border: none;
     font-weight: 400;
-    &:hover {
+    &:hover,
+    &:focus {
         color: var(--color-gray-1);
     }
 }

@@ -590,7 +590,7 @@ h1:after {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.mobileNavLinks li a:hover {
+.mobileNavLinks li a:hover, .mobileNavLinks li a:focus {
   color: var(--color-gray-1);
 }
 
@@ -780,7 +780,7 @@ section {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.projectDemo .projectVideo:hover {
+.projectDemo .projectVideo:hover, .projectDemo .projectVideo:focus {
   opacity: 1;
 }
 @media screen and (max-width: 1000px) {
@@ -939,7 +939,7 @@ section {
   border: none;
   font-weight: 400;
 }
-.clickToCopyBtn:hover, .clickToCopyBackup:hover {
+.clickToCopyBtn:hover, .clickToCopyBtn:focus, .clickToCopyBackup:hover, .clickToCopyBackup:focus {
   color: var(--color-gray-1);
 }
 
