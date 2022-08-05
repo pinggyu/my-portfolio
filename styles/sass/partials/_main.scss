@@ -115,7 +115,7 @@ section {
 }
 
 .projectLinks {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
     gap: 1.5rem;
 }
@@ -290,6 +290,6 @@ section {
     &:focus{
         border-color: var(--color-dark-4);
         color: var(--color-dark-4);
-        transform: scale(1.2)
+        transform: scale(1.2);
     }
 }

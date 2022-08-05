@@ -2,37 +2,101 @@ header {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    .headerText {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-    h1 {
-        text-align: center;
-    }
     h2 {
-        color: var(--color-dark-4);
+        color: var(--color-dark-3);
+        text-align: center;
+        padding-top: 1.5rem;
     }
+}
+
+.headerMainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
 }
 
 .logo {
     a {
-       color: var(--color-dark-3); 
-    } 
+        color: var(--color-dark-3);
+        font-family: var(--ff-body), serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+.scrollDownIcon {
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    // &:hover {
+    //     transform: scale(0.8);
+    // }
+    @media (max-width: 800px) {
+        display: none;
+    }
+}
+
+// H1 animation adapted from https: //codepen.io/oksas/pen/GoGowK  
+
+h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.5s ease, opacity 1s ease;
+}
+
+.isLoading h1 {
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+h1:after {
+    height: 2px;
+    width: 100%;
+    content: "";
+    background: var(--color-dark-3);
+    display: block;
+    position: absolute;
+    transition: width 0.4s ease;
+    transition-delay: 0.8s;
+}
+
+h1:after {
+    bottom: 0;
+    left: 0;
+}
+
+.isLoading h1:after {
+    width: 0;
 }
 
 /* =========================
  * Navigation
  * ======================== */
 
+ // desktop menu
+
 .desktopNav {
-    padding: 2rem 0;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100vw;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    max-width: none;
+    border-bottom: 1px solid var(--color-dark-3);
+    background-color: var(--color-light-4);
+    z-index: 50;
 }
 
 .navLinks {
@@ -48,6 +112,8 @@ header {
         display: none;
     }
 }
+
+// mobile menu
 
 .mobileNavContainer {
     display: none;
@@ -100,7 +166,7 @@ header {
 
 .menuBtn {
     display: none;
-    svg {
+    img {
         position: absolute;
         right: 2rem;
         top: 2rem;
@@ -109,14 +175,5 @@ header {
     }
     @media (max-width: 800px) {
         display: block;
-    }
-}
-
-.scrollDownIcon {
-    position: absolute;
-    right: 50px;
-    bottom: 50px;
-    @media (max-width: 800px) {
-        display: none;
     }
 }

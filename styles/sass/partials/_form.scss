@@ -38,7 +38,7 @@
 
     .inputLabel {
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.6rem;
         color: var(--color-gray-1);
         position: absolute;
@@ -53,12 +53,16 @@
     }
 
     .inputLabelFocused {
-        transform: scale(0.85) translateY(-1.7rem);
+        transform: scale(0.9) translateY(-1.7rem);
         color: var(--color-dark-3);
     }
 
     .formInputFocused {
         border-color: var(--color-dark-3);
+    }
+
+    .formTitle {
+        padding-bottom: 2.5rem;
     }
 
 }

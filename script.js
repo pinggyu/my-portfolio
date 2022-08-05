@@ -2,6 +2,14 @@
  * HEADER SECTION
  * ==============================================*/
 
+// H1 animation
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  setTimeout(function() {
+    document.getElementById('name').classList.remove("isLoading");
+  }, 100);
+});
+
 // Mobile slide-out navigation & disable scroll when menu modal is open
 const menuBtn = document.getElementById('menuBtn');
 const closeBtn = document.getElementById('closeBtn');
