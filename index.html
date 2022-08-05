@@ -27,47 +27,48 @@
 </head>
 <body data-aos-easing="ease" data-aos-offset="300" data-aos-delay="300">
     <header>
-        <!-- Desktop Nav -->
-        <nav class="desktopNav wrapper">
-            <div class="logo">
-                <a href="/">Ping Yu</a>
+        <!-- Main Nav -->
+        <div class="mainNav">
+            <!-- Logo -->
+            <div class="logo" data-aos="fade-right" data-aos-duration="1200">
+                <a href="/">PY</a>
             </div>
-            <ul class="navLinks">
-                <li class="linkBtn hoverUnderline"><a href="#about">About</a></li>
-                <li class="linkBtn hoverUnderline"><a href="#projects">Portfolio</a></li>
-                <li class="linkBtn hoverUnderline"><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="mobileNavBtnContainer wrapper">
-            <button class="menuBtn" id="menuBtn">
-                <img src="./assets/images/menuButton.svg" alt="Menu Button">
-            </button>
-        </div>
-        <!-- Mobile Nav -->
-        <div class="mobileNavContainer" id="mobileNavContainer">
-            <div class="closeMobileBtnContainer wrapper">
-                <button class="closeBtn" id="closeBtn">
-                    <svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle opacity="0.2" cx="51" cy="50" r="50" stroke="#20211F" />
-                        <rect x="36" y="63.2843" width="40" height="2" transform="rotate(-45 36 63.2843)" fill="#1B1A18" />
-                        <rect x="37.4143" y="35" width="40" height="2" transform="rotate(45 37.4143 35)" fill="#1B1A18" />
-                    </svg>
+            <!-- Desktop Nav -->
+            <nav class="desktopNav">
+                <ul class="navLinks" data-aos="fade-left" data-aos-duration="1200">
+                    <li class="linkBtn hoverUnderline"><a href="#about">About</a></li>
+                    <li class="linkBtn hoverUnderline"><a href="#projects">Portfolio</a></li>
+                    <li class="linkBtn hoverUnderline"><a href="#contact">Contact</a></li>
+                </ul>                
+            </nav>
+            <!-- Mobile Nav Menu Btn -->
+            <div class="mobileNavBtnContainer wrapper" data-aos="fade-left" data-aos-duration="1200">
+                <button class="menuBtn" id="menuBtn">
+                    <img src="./assets/images/menuButton.svg" alt="Menu Button">
                 </button>
             </div>
-            <nav class="mobileNav wrapper">
-                <ul class="mobileNavLinks">
-                    <li class=""><a href="#about">About</a></li>
-                    <li class=""><a href="#projects">Portfolio</a></li>
-                    <li class=""><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <!-- Mobile Nav Menu -->
+            <div class="mobileNavContainer" id="mobileNavContainer">
+                <div class="closeMobileBtnContainer wrapper">
+                    <button class="closeBtn" id="closeBtn">
+                        <img src="./assets/images/closeButton.svg" alt="Close Mobile Menu Button">
+                    </button>
+                </div>
+                <nav class="mobileNav wrapper">
+                    <ul class="mobileNavLinks">
+                        <li class="mobileNavLink"><a href="#about" >About</a></li>
+                        <li class="mobileNavLink"><a href="#projects">Portfolio</a></li>
+                        <li class="mobileNavLink"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <!-- Header -->
         <div class="headerMainContent wrapper">
             <div id="name" class="isLoading">
                 <h1>Ping Yu</h1>  
             </div>
-            <h2 data-aos="fade-up" data-aos-duration="1500">Frontend Web Developer</h2>
+            <h2 data-aos="fade-down" data-aos-duration="1500">Frontend Web Developer</h2>
             <div class="scrollDownContainer">
                 <a href="#mainContent">
                     <img class="scrollDownIcon" id="scrollDownIcon" src="./assets/images/scrollDown.svg" alt="Scroll Down Icon">
@@ -83,12 +84,13 @@
                 <div class="aboutSection">
                     <div class="introSubsection" data-aos="fade-right" data-aos-duration="1200">
                         <h4>Hi, I'm Ping ⎯ a web developer based in Toronto, Canada.</h4>
-                        <p>I'm passionate about building responsive and accessible web applications in order to create great user experiences. Previously, I was working at a large consulting firm in financial services as a CPA and in tech advisory. I also have experience working in bizops for an early stage tech startup. I am very adaptable and love learning new technologies and frameworks.
-                        <p>In my free time, I enjoy trying new restaurants around the city, traveling and creating social media content for various clients (past clients include Nintendo, Visa, Hudson's Bay and more). </p>
-                        <button class="button linkButton" data-hover="View Resume →"><span class="buttonHover">View Resume →</span></button>                        
+                        <p>Specializing in front end, I'm passionate about building responsive and accessible web applications to create great user experiences. I have a Computer Science minor from McGill University and recently completed Juno College's Web Development bootcamp. I'm very adaptable and love learning new technologies and frameworks!
+                        <p>Previously, I was working at a large consulting firm in financial services and tech advisory as a CPA. I also have experience working on the BizOps team for an early stage tech startup.</p>
+                        <!-- <button class="button linkButton" data-hover="View Resume →"><span class="buttonHover">View Resume →</span></button>                         -->
                     </div>
                     <div class="skillsSubsection" data-aos="fade-left" data-aos-duration="1200">
                         <h4>Toolkit/Skills</h4>
+                        <h5>Proficient</h5>
                         <ul class="skillsList">
                             <li class="tag">HTML</li>
                             <li class="tag">CSS</li>
@@ -102,6 +104,13 @@
                             <li class="tag">Pair Programming</li>
                             <li class="tag">Accessibility</li>
                             <li class="tag">Responsive Design</li>
+                        </ul>
+                        <h5>Familiar</h5>
+                        <ul class="skillsList">
+                            <li class="tag">AWS</li>
+                            <li class="tag">Java</li>
+                            <li class="tag">C</li>
+                            <li class="tag">SQL</li>
                         </ul>
                     </div>
                 </div>
@@ -125,7 +134,7 @@
                     <li class="projectDetails">
                         <div class="projectText">
                             <h4 class="projectName">JobSeekr</h4>
-                            <p class="projectSummary">JobSeekr is a job searching website leveraging the Adzuna API and using Vanilla JS. Features include a dark/light mode toggle, error handling, a minimal UI, sorting and pagination of results.   </p>
+                            <p class="projectSummary">JobSeekr is a job searching website leveraging the Adzuna API & built in vanilla JS. This was a pair programming project. Features include a dark/light mode toggle, asynchronous API call & error handling, responsive design, sorting and pagination of results.</p>
                         </div>
                         <div class="projectTools">
                             <ul class="projectToolsList">
@@ -143,7 +152,7 @@
                     <li class="projectDetails">
                         <div class="projectText">
                             <h4 class="projectName">Willow</h4>
-                            <p class="projectSummary">Willow is a multi-page PSD conversion made using given design files, featuring a Home, Blog and Contact page. This is a fully responsive website, built in Sass, and adheres to accessibility best standards.</p>
+                            <p class="projectSummary">Willow is a multi-page PSD conversion made using given design files, featuring a Home, Blog and Contact page. This is a fully responsive website (down to 320px), built in primarily in Sass, and adheres to accessibility best standards.</p>
                         </div>
                         <div class="projectTools">
                             <ul class="projectToolsList">
@@ -221,7 +230,7 @@
                             <!-- Input 2 -->
                             <div class="formRow">
                                 <input type="email" name="email" id="email" class="formInput" required>
-                                <label for="email" class="inputLabel">E-mail</label>
+                                <label for="email" class="inputLabel">Email</label>
                             </div>
                             <!-- Input  -->
                             <div class="formRow">
@@ -239,7 +248,7 @@
 
     </main>
     <footer>
-        <p class="copyright">Ⓒ Copyright 2022 - Ping Yu</p>
+        <p class="copyright">Ⓒ 2022 - Made with ☕ & 🖤 by Ping Yu</p>
     </footer>
 </body>
 </html>

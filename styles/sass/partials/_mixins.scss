@@ -1,7 +1,7 @@
 @mixin borderButtonStyle {
     font-family: var(--ff-body), sans-serif;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
     line-height: 1.6rem;
     border: 2px solid var(--color-dark-3);
@@ -10,25 +10,26 @@
     color: var(--color-light-2);
     text-align: center;
     padding: 1rem 1.5rem;
-    border-radius: 50px;
+    // border-radius: 50px;
     transition: 0.3s;
 }
 
 @mixin linkStyle {
     color: var(--color-dark-3);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 2rem;
+    text-transform: uppercase;
 }
 
 @mixin skillsTag {
     text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 0.9rem;
+    font-weight: 400;
     line-height: 1.6rem;
-    border: 2px solid var(--color-dark-3);
+    border: 1px solid var(--color-dark-3);
     background-color: transparent;
     color: var(--color-dark-3);
     text-align: center;
     padding: 0.4rem 0.7rem;
-    border-radius: 25px;
+    // border-radius: 25px;
 }

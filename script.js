@@ -15,6 +15,7 @@ const menuBtn = document.getElementById('menuBtn');
 const closeBtn = document.getElementById('closeBtn');
 const mobileNav = document.getElementById('mobileNavContainer');
 const body = document.querySelector("body");
+const navLinks = document.querySelectorAll('.mobileNavLink');
 let mobileNavOpen = false;
 
 const showMobileNav = (e) => {
@@ -22,7 +23,16 @@ const showMobileNav = (e) => {
         mobileNav.style.transform = "translateX(0%)";
         menuBtn.removeEventListener('click', showMobileNav);
         mobileNavOpen = true;
+        // prevent scroll while modal is open
         body.style.overflow = "hidden";
+        body.style.height = "100vh";
+
+
+        about.addEventListener('click', hideMobileNav);
+        // close the menu if a link is clicked
+        navLinks.forEach((navLink) => {
+            navLink.addEventListener('click', hideMobileNav);
+        })
     }
 }
 
@@ -31,7 +41,8 @@ const hideMobileNav = (e) => {
         mobileNav.style.transform = "translateX(100%)";
         mobileNavOpen = false;   
         menuBtn.addEventListener('click', showMobileNav);
-        body.style.overflow = "auto";     
+        body.style.overflow = "auto";
+        body.style.height = "auto";     
     }
 }
 
@@ -46,7 +57,7 @@ window.onscroll = function () {
 
 const scrollRotate = () => {
     let image = document.getElementById("scrollDownIcon");
-    image.style.transform = "rotate(" + -window.pageYOffset/2 + "deg)";
+    image.style.transform = "rotate(" + -window.pageYOffset/5 + "deg)";
 }
 
 /* ===============================================
