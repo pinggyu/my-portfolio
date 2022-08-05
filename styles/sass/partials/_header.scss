@@ -18,6 +18,12 @@ header {
     }
 }
 
+.logo {
+    a {
+       color: var(--color-dark-3); 
+    } 
+}
+
 /* =========================
  * Navigation
  * ======================== */
@@ -108,7 +114,7 @@ header {
 
 .scrollDownIcon {
     position: absolute;
-    left: 50px;
+    right: 50px;
     bottom: 50px;
     @media (max-width: 800px) {
         display: none;

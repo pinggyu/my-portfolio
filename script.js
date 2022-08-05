@@ -30,6 +30,17 @@ const hideMobileNav = (e) => {
 menuBtn.addEventListener('click', showMobileNav);
 closeBtn.addEventListener('click', hideMobileNav);
 
+// Rotate scroll down svg icon on scroll
+
+window.onscroll = function () {
+    scrollRotate();
+};
+
+const scrollRotate = () => {
+    let image = document.getElementById("scrollDownIcon");
+    image.style.transform = "rotate(" + -window.pageYOffset/2 + "deg)";
+}
+
 /* ===============================================
  * PROJECTS SECTION
  * ==============================================*/
@@ -51,6 +62,40 @@ demos.forEach((demo) => {
 /* ===============================================
  * CONTACT SECTION
  * ==============================================*/
+
+// Handle form submit (Formspree)
+
+const contactForm = document.getElementById('contactForm');
+
+async function handleSubmit(e) {
+    e.preventDefault();
+    const status = document.getElementById("formStatus");
+    const data = new FormData(e.target);
+    fetch(e.target.action, {
+    method: contactForm.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+    }).then(response => {
+    if (response.ok) {
+        status.innerHTML = "Thanks for your submission! I will get back to you shortly.";
+        contactForm.reset();
+    } else {
+        response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+            status.innerHTML = "Oops! There was a problem submitting your form. Please reach me by email."
+        }
+        })
+    }
+    }).catch(error => {
+    status.innerHTML = "Oops! There was a problem submitting your form. Please reach me by email."
+    });
+}
+
+contactForm.addEventListener("submit", handleSubmit)
 
 // Form labels animation
 
@@ -94,5 +139,8 @@ const copyToClipboard = str => {
 // Fire the event on click
 copyButton.addEventListener('click', clickToCopy);
 
+/* ===============================================
+ * AOS ANIMATIONS
+ * ==============================================*/
 
-
+AOS.init();

@@ -164,6 +164,10 @@ section {
     .smallCaps {
         padding-bottom: 1.5rem;
     }
+    .formStatus {
+        text-align: center;
+        padding-top: 1.5rem;
+    }
 }
 
 .emailSocialsContainer {
@@ -215,7 +219,7 @@ section {
 .clickToCopyBtn + span {
     display: none;
     margin-left: 1rem;
-    background: var(--color-gray-1);
+    background: var(--color-dark-3);
     padding: .5rem;
     border-radius: .2rem;
     position: absolute;
@@ -238,7 +242,7 @@ section {
     position: absolute;
     pointer-events: none;
     border-color: rgba(218, 218, 218, 0);
-    border-right-color: var(--color-gray-1);
+    border-right-color: var(--color-dark-3);
     border-width: 10px;
     margin-top: -5px;
 }

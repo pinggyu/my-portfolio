@@ -13,16 +13,19 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles/styles.css">
     <!-- Favicon -->
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <!-- JS Script, load after body -->
     <script defer src="./script.js"></script>
     <title>Ping Yu</title>
 </head>
-<body>
+<body data-aos-easing="ease" data-aos-offset="300" data-aos-duration="1000" data-aos-delay="300">
     <header>
         <!-- Desktop Nav -->
         <nav class="desktopNav wrapper">
             <div class="logo">
-                Ping Yu
+                <a href="/">Ping Yu</a>
             </div>
             <ul class="navLinks">
                 <li class="linkBtn hoverUnderline"><a href="#about">About</a></li>
@@ -65,7 +68,7 @@
             <h1>Ping Yu</h1>
             <h2>Front End Web Developer</h2>
             <div class="scrollDownContainer">
-                <img class="scrollDownIcon" src="./assets/images/scrollDown.svg" alt="">
+                <img class="scrollDownIcon" id="scrollDownIcon" src="./assets/images/scrollDown.svg" alt="">
             </div>
         </div>
     </header>
@@ -74,13 +77,13 @@
             <div class="wrapper">
                 <h3 class="sectionTitle">About</h3>
                 <div class="aboutSection">
-                    <div class="introSubsection">
+                    <div class="introSubsection" data-aos="fade-right">
                         <h4>Hi, I'm Ping ⎯ a web developer based in Toronto, Canada.</h4>
                         <p>I'm passionate about building responsive and accessible web applications in order to create great user experiences. Previously, I was working at a large consulting firm in financial services as a CPA and in tech advisory. I also have experience working in bizops for an early stage tech startup. I am very adaptable and love learning new technologies and frameworks.
                         <p>In my free time, I enjoy trying new restaurants around the city, traveling and creating social media content for various clients (past clients include Nintendo, Visa, Hudson's Bay and more). </p>
                         <!-- <button class="button linkButton" data-hover="View Resume →"><span class="buttonHover">View Resume →</span></button>                         -->
                     </div>
-                    <div class="skillsSubsection">
+                    <div class="skillsSubsection" data-aos="fade-left">
                         <h4>Toolkit/Skills</h4>
                         <ul class="skillsList">
                             <li class="tag">HTML</li>
@@ -108,7 +111,7 @@
                 <p class="hoverMsg accentText">( Hover to view the project demos )</p>
                 <ul class="projectsSection">
                 <!-- Project 1 -->
-                    <li class="projectDemo">
+                    <li class="projectDemo" data-aos="fade-right">
                         <video class="projectVideo">
                             <source src="./assets/images/jobseekr.mov" loop muted="muted">
                             Your browser does not support the HTML5 video element.
@@ -150,7 +153,7 @@
                             <a href="https://github.com/pinggyu/ping-yu-project-one" class="linkBtn hoverUnderline">View Code →</a>
                         </div>
                     </li>
-                    <li class="projectDemo">
+                    <li class="projectDemo" data-aos="fade-up-left">
                         <video class="projectVideo">
                             <source src="./assets/images/willow.mov" loop muted="muted">
                             Your browser does not support the HTML5 video element.
@@ -168,7 +171,7 @@
             <div class="wrapper">
                 <h3 class="sectionTitle">Get in touch</h3>
                 <div class="contactSection">
-                    <div class="emailSocialsContainer">
+                    <div class="emailSocialsContainer" data-aos="fade-right">
                         <div class="emailContainer">
                             <p class="smallCaps">E-Mail</p>
                             <div class="clickToCopyContainer">
@@ -200,35 +203,30 @@
                                         <span class="sr-only">Link to Medium profile</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="mailto:pingyuuu@gmail.com">
-                                        <i class="fa-solid fa-envelope socialIcon" aria-hidden="true"></i>
-                                        <span class="sr-only">Link to Email</span>
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="contactFormContainer">
+                    <div class="contactFormContainer" data-aos="fade-left">
                         <p class="smallCaps">Drop a line below</p>
-                        <form action="" class="contactForm">
+                        <form action="https://formspree.io/f/mpznaknw" method="POST" class="contactForm" id="contactForm">
                             <!-- Input 1 -->
                             <div class="formRow">
-                                <input type="text" id="name" class="formInput" required>
+                                <input type="text" name="name" id="name" class="formInput" required>
                                 <label for="name" class="inputLabel">Name</label>
                             </div>
                             <!-- Input 2 -->
                             <div class="formRow">
-                                <input type="text" id="email" class="formInput" required>
+                                <input type="email" name="email" id="email" class="formInput" required>
                                 <label for="email" class="inputLabel">E-mail</label>
                             </div>
                             <!-- Input  -->
                             <div class="formRow">
-                                <textarea id="message" class="formInput" cols="20" rows="5" required></textarea>
+                                <textarea id="message" name="message" class="formInput" cols="20" rows="5" required></textarea>
                                 <label for="message" class="inputLabel">Message</label>
                             </div>
                             <!-- Submit button -->
-                            <button class="submitBtn linkButton" data-hover="Send Message →"><span class="buttonHover">Send Message →</span></button>
+                            <button type="submit" class="submitBtn linkButton" data-hover="Send Message →"><span class="buttonHover">Send Message →</span></button>
+                            <p class="formStatus" id="formStatus"></p>
                         </form>
                     </div>
                 </div>
