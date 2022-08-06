@@ -42,7 +42,7 @@ body {
     background-color: var(--color-light-4);
     color: var(--color-dark-3);
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 /* =========================
@@ -83,7 +83,7 @@ h3 {
 }
 
 h4 {
-    font-size: clamp(0.5rem, 9vw, 1.5rem);
+    font-size: clamp(0.5rem, 9vw, 1.3rem);
     font-weight: 400;
 }
 
@@ -97,6 +97,14 @@ p {
 
  .button, .submitBtn {
     @include borderButtonStyle;
+ }
+
+ .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 48
  }
 
  /* =========================

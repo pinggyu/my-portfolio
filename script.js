@@ -66,7 +66,7 @@ const scrollRotate = () => {
 
 // Play project demos on hover
 
-const demos = document.querySelectorAll('video')
+const demos = document.querySelectorAll('video');
 
 demos.forEach((demo) => {
     demo.addEventListener('mouseover', function (e) {

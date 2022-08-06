@@ -249,7 +249,7 @@ body {
   background-color: var(--color-light-4);
   color: var(--color-dark-3);
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* =========================
@@ -289,7 +289,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(0.5rem, 9vw, 1.5rem);
+  font-size: clamp(0.5rem, 9vw, 1.3rem);
   font-weight: 400;
 }
 
@@ -314,6 +314,10 @@ p {
   padding: 1rem 1.5rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 48;
 }
 
 /* =========================
@@ -614,7 +618,7 @@ section {
   background-color: transparent;
   color: var(--color-dark-3);
   text-align: center;
-  padding: 0.4rem 0.7rem;
+  padding: 0.1rem 0.5rem;
 }
 
 /* =========================
@@ -681,6 +685,9 @@ section {
   display: -ms-flexbox;
   display: flex;
   gap: 1.5rem;
+}
+.projectLinks a {
+  font-weight: 700;
 }
 
 .projectDetails {
@@ -953,7 +960,7 @@ section {
 }
 .contactForm .inputLabel {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6rem;
   color: var(--color-gray-1);
   position: absolute;
