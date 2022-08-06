@@ -24,7 +24,7 @@ const showMobileNav = (e) => {
         menuBtn.removeEventListener('click', showMobileNav);
         mobileNavOpen = true;
         // prevent scroll while modal is open
-        body.style.overflow = "hidden";
+        body.style.overflowY = "hidden";
         body.style.height = "100vh";
 
 
@@ -41,7 +41,7 @@ const hideMobileNav = (e) => {
         mobileNav.style.transform = "translateX(100%)";
         mobileNavOpen = false;   
         menuBtn.addEventListener('click', showMobileNav);
-        body.style.overflow = "auto";
+        body.style.overflowY = "auto";
         body.style.height = "auto";     
     }
 }
