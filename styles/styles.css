@@ -250,6 +250,7 @@ body {
   color: var(--color-dark-3);
   font-weight: 300;
   font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
 /* =========================
@@ -267,7 +268,7 @@ h5,
 h6 {
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h1 {
@@ -304,7 +305,7 @@ p {
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.6rem;
   border: 2px solid var(--color-dark-3);
   cursor: pointer;
@@ -327,8 +328,8 @@ p {
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
   color: var(--color-gray-1);
-  font-weight: 700;
-  font-size: 0.8rem;
+  font-weight: 600;
+  font-size: 0.6rem;
   line-height: 0.8rem;
   letter-spacing: 2px;
 }
@@ -336,24 +337,19 @@ p {
 .accentText {
   font-family: var(--ff-body), sans-serif;
   color: var(--color-dark-4);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   line-height: 1.6rem;
 }
 
 :root {
-  --color-dark-1: #111111;
-  --color-dark-2: #262626;
   --color-dark-3: #333333;
-  --color-dark-4: #555555;
-  --color-light-1: #f1e9db;
   --color-light-2: #eeece6;
   --color-light-3: #f2f1ed;
   --color-light-4: #f7f6f3;
   --color-gray-1: #888888;
-  --color-gray-2: #cccccc;
   /* Typography */
-  --ff-body: "Nunito Sans";
+  --ff-body: "Inter";
   --ff-heading: "Butler";
 }
 
@@ -687,7 +683,7 @@ section {
   gap: 1.5rem;
 }
 .projectLinks a {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .projectDetails {
@@ -727,7 +723,7 @@ section {
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.6rem;
   border: 2px solid var(--color-dark-3);
   cursor: pointer;
@@ -846,7 +842,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.4px;
   font-weight: 400;
-  color: var(--color-light-1);
+  color: var(--color-light-4);
   width: 80px;
   top: 0.5rem;
 }
@@ -959,7 +955,7 @@ section {
   position: relative;
 }
 .contactForm .inputLabel {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.9rem;
   line-height: 1.6rem;
   color: var(--color-gray-1);
@@ -1084,6 +1080,7 @@ section {
   border-bottom: 1px solid var(--color-dark-3);
   background-color: var(--color-light-4);
   z-index: 40;
+  opacity: 0.9;
 }
 
 @media (max-width: 800px) {
