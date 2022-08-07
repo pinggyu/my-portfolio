@@ -292,7 +292,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(2.4rem, 5vw, 4.3rem);
+  font-size: clamp(2.3rem, 5vw, 4.3rem);
 }
 
 h4 {
@@ -873,7 +873,6 @@ section {
   margin-left: 1rem;
   padding: 0.2rem !important;
   position: absolute;
-  top: 0.5rem;
   font-size: 0.6rem !important;
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
