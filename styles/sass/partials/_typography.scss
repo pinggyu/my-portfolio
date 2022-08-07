@@ -55,6 +55,9 @@ h3 {
     font-family: var(--ff-heading), serif;
     text-transform: uppercase;
     font-weight: 250;
+    @media screen and (max-width: 1125px) {
+        font-weight: 300;
+    }
 }
 
 h4,

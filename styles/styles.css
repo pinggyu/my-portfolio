@@ -262,6 +262,12 @@ h3 {
   text-transform: uppercase;
   font-weight: 250;
 }
+@media screen and (max-width: 1125px) {
+  h1,
+h3 {
+    font-weight: 300;
+  }
+}
 
 h4,
 h5,
