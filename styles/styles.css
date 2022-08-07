@@ -272,7 +272,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(5.5rem, 13vw, 8.5rem);
+  font-size: clamp(4.5rem, 13vw, 8.5rem);
   font-weight: 250;
   letter-spacing: -2px;
   line-height: 1;
@@ -286,16 +286,17 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(3rem, 9vw, 4.3rem);
+  font-size: clamp(3rem, 5vw, 4.3rem);
 }
 
 h4 {
-  font-size: clamp(0.5rem, 9vw, 1.3rem);
+  font-size: clamp(1rem, 5vw, 1.3rem);
   font-weight: 400;
+  line-height: 1.5;
 }
 
 p {
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 /* =========================
@@ -371,6 +372,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul,
@@ -511,6 +513,7 @@ h1:after {
 footer {
   text-align: center;
   padding: 0.5rem;
+  background-color: var(--color-light-3);
 }
 footer .copyright {
   text-transform: uppercase;
@@ -524,11 +527,11 @@ footer .copyright {
  * ======================== */
 section {
   border-top: 1px solid var(--color-gray-1);
-  padding: 5rem 0;
+  padding: clamp(3rem, 5vw, 5rem) 0;
 }
 
 .sectionTitle {
-  padding-bottom: 3rem;
+  padding-bottom: clamp(1rem, 5vw, 3rem);
 }
 
 /* =========================
@@ -542,7 +545,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4rem;
+  gap: clamp(2rem, 5vw, 4rem);
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -576,6 +579,10 @@ section {
   margin-top: 1rem;
 }
 
+.contactText {
+  font-weight: 400;
+}
+
 .skillsSubsection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -591,6 +598,12 @@ section {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+@media screen and (max-width: 1125px) {
+  .skillsSubsection {
+    border-top: 1px solid var(--color-dark-3);
+    padding-top: 2rem;
+  }
 }
 
 .skillsList {
@@ -629,7 +642,7 @@ section {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   padding-top: 2rem;
-  grid-gap: 3rem;
+  grid-gap: clamp(2rem, 5vw, 3rem);
 }
 @media screen and (max-width: 1000px) {
   .projectsSection {
@@ -676,7 +689,6 @@ section {
 }
 
 .projectLinks {
-  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,6 +696,17 @@ section {
 }
 .projectLinks a {
   font-weight: 600;
+}
+
+.projectText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
 }
 
 .projectDetails {
@@ -697,6 +720,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 1.5rem;
 }
 
 .projectToolsList {
@@ -706,7 +730,6 @@ section {
   gap: 1rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 2rem;
 }
 
 .viewMore {
@@ -717,7 +740,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 4rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
 }
 .viewMore a {
   font-family: var(--ff-body), sans-serif;
@@ -735,10 +758,6 @@ section {
   transition: 0.3s;
 }
 
-.projectSummary {
-  margin-top: 1rem;
-}
-
 .linkBtn {
   color: var(--color-dark-3);
   font-weight: 400;
@@ -750,7 +769,7 @@ section {
  * CONTACT SECTION
  * ======================== */
 .contact {
-  background-color: var(--color-light-2);
+  background-color: var(--color-light-4);
 }
 .contact .wrapper {
   display: -webkit-box;
@@ -820,7 +839,7 @@ section {
 
 .clickToCopyBtn, .clickToCopyBackup {
   font-family: var(--ff-heading), serif;
-  font-size: clamp(0.5rem, 9vw, 2.7rem);
+  font-size: clamp(0.5rem, 9vw, 2.25rem);
   line-height: 3.2rem;
   cursor: pointer;
   background-color: transparent;
@@ -835,16 +854,23 @@ section {
 .clickToCopyBtn + span {
   display: none;
   margin-left: 1rem;
-  background: var(--color-dark-3);
-  padding: 0.5rem;
+  padding: 0.2rem !important;
   position: absolute;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  font-weight: 400;
-  color: var(--color-light-4);
-  width: 80px;
   top: 0.5rem;
+  font-size: 0.6rem !important;
+  font-family: var(--ff-body), sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+  border: 2px solid var(--color-dark-3);
+  cursor: pointer;
+  background-color: var(--color-dark-3);
+  color: var(--color-light-2);
+  text-align: center;
+  padding: 1rem 1.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .clickToCopyBtn + span:after {
@@ -870,7 +896,7 @@ section {
   display: none;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1125px) {
   .clickToCopyBtn {
     display: none;
   }
@@ -1063,7 +1089,6 @@ section {
  * Navigation
  * ======================== */
 .mainNav {
-  padding: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1081,6 +1106,11 @@ section {
   background-color: var(--color-light-4);
   z-index: 40;
   opacity: 0.9;
+}
+@media (max-width: 800px) {
+  .mainNav {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 800px) {
