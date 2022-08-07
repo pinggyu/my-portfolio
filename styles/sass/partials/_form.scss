@@ -16,7 +16,7 @@
         border: 0;
         outline: none;
         border-bottom: 2px solid var(--color-gray-1);
-        margin-bottom: 3rem;
+        margin-bottom: clamp(2rem, 5vw, 3rem);
         padding: 0.5rem 0.25rem;
         color: var(--color-dark-3);
         width: 100%;
@@ -62,7 +62,10 @@
     }
 
     .formTitle {
-        padding-bottom: 2.5rem;
+        padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+        @media screen and (max-width: 1125px) {
+            text-align: center;
+        }
     }
 
 }

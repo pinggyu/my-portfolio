@@ -49,9 +49,9 @@ section {
 
 .skillsSubsection {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     flex: 1;
     @media screen and (max-width: 1125px) {
         border-top: 1px solid var(--color-dark-3);
@@ -61,9 +61,9 @@ section {
 
 .skillsList {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .tag {
@@ -146,7 +146,7 @@ section {
 
 .projectToolsList {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
 }
 
@@ -175,7 +175,7 @@ section {
         flex-direction: column;
     }
     .smallCaps {
-        padding-bottom: 1.5rem;
+        padding-bottom: clamp(0.7rem, 3vw, 1.5rem);
     }
     .formStatus {
         text-align: center;
@@ -185,11 +185,12 @@ section {
 
 .emailSocialsContainer {
     display: flex;
-    gap: 2rem;
+    gap: clamp(1.5rem, 3vw, 2rem);
     flex-direction: column;
     width: 50%;
     @media screen and (max-width: 1125px) {
         width: 100%;
+        text-align: center;
     }
 }
 
@@ -202,7 +203,7 @@ section {
 
 .contactSection {
     display: flex;
-    gap: 3rem;
+    gap: clamp(2rem, 5vw, 3rem);
     flex-direction: row;
     @media screen and (max-width: 1125px) {
         flex-direction: column;
@@ -217,8 +218,7 @@ section {
 
 .clickToCopyBtn, .clickToCopyBackup {
     font-family: var(--ff-heading), serif;
-    font-size: clamp(1.65rem, 5vw, 2.25rem);
-    line-height: 3.2rem;
+    font-size: clamp(1.4rem, 5vw, 2.25rem);
     cursor: pointer;
     background-color: transparent;
     color: var(--color-dark-3);
@@ -278,14 +278,17 @@ section {
  
 .socialLinks {
     display: flex;
-    gap: clamp(0.1rem, 5vw, 2rem);
+    gap: clamp(0.5rem, 3vw, 2rem);
+    @media screen and (max-width: 1125px) {
+        justify-content: center;
+    }
 }
 
 
 .socialIcon {
     font-size: 1.2rem;
-    padding: clamp(0.1rem, 8vw, 1.7rem);
-    border: 2px solid var(--color-gray-1);
+    padding: clamp(1.2rem, 3vw, 1.7rem);
+    border: 1px solid var(--color-gray-1);
     border-radius: 50%;
     color: var(--color-dark-3);
     transition: 0.3s;

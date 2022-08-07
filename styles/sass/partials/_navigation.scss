@@ -19,7 +19,7 @@
 }
 
 .desktopNav {
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
         display: none;
     }
 }
@@ -47,7 +47,7 @@
     opacity: 1;
     transition: 0.3s;
     transform: translateX(100%);
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
         display: block;
     }
 }
@@ -89,7 +89,7 @@
 
 .mobileNavBtnContainer {
     display: none;
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
         display: flex;
         align-items: center;
         justify-content: flex-end;
