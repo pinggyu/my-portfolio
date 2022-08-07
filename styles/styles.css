@@ -513,7 +513,8 @@ h1:after {
 footer {
   text-align: center;
   padding: 0.5rem;
-  background-color: var(--color-light-3);
+  background-color: var(--color-light-4);
+  border-top: 1px solid var(--color-gray-1);
 }
 footer .copyright {
   text-transform: uppercase;
@@ -839,7 +840,7 @@ section {
 
 .clickToCopyBtn, .clickToCopyBackup {
   font-family: var(--ff-heading), serif;
-  font-size: clamp(0.5rem, 9vw, 2.25rem);
+  font-size: clamp(1.65rem, 5vw, 2.25rem);
   line-height: 3.2rem;
   cursor: pointer;
   background-color: transparent;
@@ -1107,11 +1108,6 @@ section {
   z-index: 40;
   opacity: 0.9;
 }
-@media (max-width: 800px) {
-  .mainNav {
-    opacity: 1;
-  }
-}
 
 @media (max-width: 800px) {
   .desktopNav {
@@ -1137,7 +1133,7 @@ section {
   left: 0;
   right: 0;
   background-color: var(--color-light-4);
-  z-index: 20;
+  z-index: 50;
   opacity: 1;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -1184,7 +1180,7 @@ section {
 .closeBtn img {
   position: absolute;
   width: 80px;
-  right: 40px;
+  right: 25px;
   top: 25px;
   z-index: 30;
   -webkit-transition: 0.3s;

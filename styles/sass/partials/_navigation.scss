@@ -16,9 +16,6 @@
     background-color: var(--color-light-4);
     z-index: 40;
     opacity: 0.9;
-    @media (max-width: 800px) {
-        opacity: 1;
-    }
 }
 
 .desktopNav {
@@ -46,7 +43,7 @@
     left: 0;
     right: 0;
     background-color: var(--color-light-4);
-    z-index: 20;
+    z-index: 50;
     opacity: 1;
     transition: 0.3s;
     transform: translateX(100%);
@@ -83,7 +80,7 @@
     img {
         position: absolute;
         width: 80px;
-        right: 40px;
+        right: 25px;
         top: 25px;
         z-index: 30;
         transition: 0.3s;
