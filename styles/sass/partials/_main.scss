@@ -188,7 +188,7 @@ section {
     gap: clamp(1.5rem, 3vw, 2rem);
     flex-direction: column;
     width: 50%;
-    @media screen and (max-width: 1125px) {
+    @media screen and (max-width: 380px) {
         width: 100%;
         text-align: center;
     }
@@ -278,7 +278,7 @@ section {
 .socialLinks {
     display: flex;
     gap: clamp(0.5rem, 3vw, 2rem);
-    @media screen and (max-width: 1125px) {
+    @media screen and (max-width: 380px) {
         justify-content: center;
     }
 }

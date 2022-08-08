@@ -66,7 +66,7 @@
 
     .formTitle {
         padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
-        @media screen and (max-width: 1125px) {
+        @media screen and (max-width: 380px) {
             text-align: center;
         }
     }

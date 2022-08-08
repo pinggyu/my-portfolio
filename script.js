@@ -32,14 +32,26 @@ menuBtn.addEventListener('click', toggleMobileNav);
 
 // Rotate scroll down svg icon on scroll
 
-window.onscroll = function () {
-    scrollRotate();
-};
-
 const scrollRotate = () => {
     let image = document.getElementById("scrollDownIcon");
-    image.style.transform = "rotate(" + -window.pageYOffset/5 + "deg)";
+    image.style.transform = "rotate(" + -window.pageYOffset/20 + "deg)";
 }
+
+// Shrink nav bar on scroll
+const mainNav = document.getElementById('mainNav');
+
+const scrollFunction = () => {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        mainNav.classList.add('scrolled');
+    } else {
+        mainNav.classList.remove('scrolled');
+    }
+}
+
+window.onscroll = function () {
+    scrollRotate();
+    scrollFunction();
+};
 
 /* ===============================================
  * PROJECTS SECTION
