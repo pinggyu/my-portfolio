@@ -544,7 +544,7 @@ footer .copyright {
  * ======================== */
 section {
   border-top: 1px solid var(--color-gray-1);
-  padding: clamp(3rem, 5vw, 5rem) 0;
+  padding: 5rem 0;
 }
 
 .sectionTitle {
