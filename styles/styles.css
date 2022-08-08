@@ -597,7 +597,7 @@ section {
 }
 
 .contactText {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .skillsSubsection {
@@ -1055,6 +1055,10 @@ section {
   .contactForm .formTitle {
     text-align: center;
   }
+}
+
+textarea {
+  resize: none;
 }
 
 .hoverUnderline {

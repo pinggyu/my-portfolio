@@ -16,8 +16,7 @@ const mobileNav = document.getElementById('mobileNavContainer');
 const body = document.querySelector("body");
 const navLinks = document.querySelectorAll('.mobileNavLink');
 
-const toggleMobileNav = (e) => {
-    e.preventDefault();
+const toggleMobileNav = () => {
     mobileNav.classList.toggle('open');
     // trigger menu button animation (to become close button)
     menuBtn.classList.toggle('active');
