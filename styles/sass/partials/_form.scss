@@ -50,6 +50,9 @@
         transform-origin: left center;
         cursor: text;
         pointer-events: none;
+        @media screen and (max-width: 800px) {
+            font-size: 0.8rem;
+        }
     }
 
     .inputLabelFocused {

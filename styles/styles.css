@@ -252,6 +252,11 @@ body {
   font-size: 0.9rem;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
 
 /* =========================
  * Headers and paragraphs
@@ -641,6 +646,11 @@ section {
   text-align: center;
   padding: 0.1rem 0.5rem;
 }
+@media screen and (max-width: 800px) {
+  .tag {
+    font-size: 0.8rem;
+  }
+}
 
 /* =========================
  * PROJECTS SECTION
@@ -1025,6 +1035,11 @@ section {
   cursor: text;
   pointer-events: none;
 }
+@media screen and (max-width: 800px) {
+  .contactForm .inputLabel {
+    font-size: 0.8rem;
+  }
+}
 .contactForm .inputLabelFocused {
   -webkit-transform: scale(0.9) translateY(-1.7rem);
           transform: scale(0.9) translateY(-1.7rem);
@@ -1137,7 +1152,7 @@ section {
   top: 0;
   border-bottom: 1px solid var(--color-dark-3);
   background-color: var(--color-light-4);
-  z-index: 40;
+  z-index: 30;
   opacity: 0.9;
 }
 
@@ -1155,27 +1170,6 @@ section {
 }
 .navLinks a {
   color: var(--color-dark-3);
-}
-
-.mobileNavContainer {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--color-light-4);
-  z-index: 50;
-  opacity: 1;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-}
-@media screen and (max-width: 800px) {
-  .mobileNavContainer {
-    display: block;
-  }
 }
 
 .mobileNavLinks {
@@ -1209,14 +1203,24 @@ section {
   color: var(--color-gray-1);
 }
 
-.closeBtn img {
-  position: absolute;
-  width: 80px;
-  right: 25px;
-  top: 25px;
-  z-index: 30;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+.mobileNavContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-light-4);
+  z-index: 20;
+  opacity: 1;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.mobileNavContainer.open {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .mobileNavBtnContainer {
@@ -1234,4 +1238,60 @@ section {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+}
+
+.menuBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: fixed;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 40;
+}
+.menuBtn span,
+.menuBtn span::before,
+.menuBtn span::after {
+  display: block;
+  position: absolute;
+  height: 2px;
+  background-color: var(--color-dark-3);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  width: 100%;
+}
+.menuBtn span::before {
+  content: "";
+  top: -8px;
+}
+.menuBtn span::after {
+  content: "";
+  top: 8px;
+}
+
+.menuBtn.active span::before {
+  -webkit-transform: rotate(-90deg) translate(-8px, 0px);
+          transform: rotate(-90deg) translate(-8px, 0px);
+  width: 100%;
+}
+.menuBtn.active span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 100%;
+}
+.menuBtn.active span::after {
+  -webkit-transform: rotate(90deg) translate(-8px, 0px);
+          transform: rotate(90deg) translate(-8px, 0px);
+  width: 100%;
 }

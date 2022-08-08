@@ -12,42 +12,23 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 // Mobile slide-out navigation & disable scroll when menu modal is open
 const menuBtn = document.getElementById('menuBtn');
-const closeBtn = document.getElementById('closeBtn');
 const mobileNav = document.getElementById('mobileNavContainer');
 const body = document.querySelector("body");
 const navLinks = document.querySelectorAll('.mobileNavLink');
-let mobileNavOpen = false;
 
-const showMobileNav = (e) => {
-    if (!mobileNavOpen){
-        mobileNav.style.transform = "translateX(0%)";
-        menuBtn.removeEventListener('click', showMobileNav);
-        mobileNavOpen = true;
-        // prevent scroll while modal is open
-        body.style.overflowY = "hidden";
-        body.style.height = "100vh";
-
-
-        about.addEventListener('click', hideMobileNav);
-        // close the menu if a link is clicked
-        navLinks.forEach((navLink) => {
-            navLink.addEventListener('click', hideMobileNav);
-        })
-    }
+const toggleMobileNav = (e) => {
+    e.preventDefault();
+    mobileNav.classList.toggle('open');
+    // trigger menu button animation (to become close button)
+    menuBtn.classList.toggle('active');
 }
 
-const hideMobileNav = (e) => {
-    if (mobileNavOpen){
-        mobileNav.style.transform = "translateX(100%)";
-        mobileNavOpen = false;   
-        menuBtn.addEventListener('click', showMobileNav);
-        body.style.overflowY = "auto";
-        body.style.height = "auto";     
-    }
-}
+// close the menu if a link is clicked
+navLinks.forEach((navLink) => {
+    navLink.addEventListener('click', toggleMobileNav);
+})
 
-menuBtn.addEventListener('click', showMobileNav);
-closeBtn.addEventListener('click', hideMobileNav);
+menuBtn.addEventListener('click', toggleMobileNav);
 
 // Rotate scroll down svg icon on scroll
 

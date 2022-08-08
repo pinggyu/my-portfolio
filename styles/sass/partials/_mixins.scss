@@ -34,4 +34,7 @@
     color: var(--color-dark-3);
     text-align: center;
     padding: 0.1rem 0.5rem;
+    @media screen and (max-width: 800px) {
+        font-size: 0.8rem;
+    }
 }
