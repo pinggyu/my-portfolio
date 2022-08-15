@@ -371,7 +371,7 @@ p {
 }
 
 .wrapper {
-  max-width: 1440px;
+  max-width: 1920px;
   margin: 0 auto;
   width: 85%;
 }
@@ -529,7 +529,7 @@ h1:after {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: var(--color-light-4);
+  background-color: var(--color-beige);
   border-top: 1px solid var(--color-gray-1);
 }
 footer .copyright {
@@ -543,11 +543,12 @@ footer .copyright {
  * GENERAL (APPLIES TO ALL SECTIONS)
  * ======================== */
 section {
-  border-top: 1px solid var(--color-gray-1);
-  padding: 5rem 0;
+  padding-bottom: 5rem;
 }
 
 .sectionTitle {
+  border-top: 2px solid var(--color-black);
+  padding-top: 5rem;
   padding-bottom: clamp(1rem, 5vw, 3rem);
 }
 
@@ -1151,7 +1152,7 @@ textarea {
 
 .mainNav.scrolled {
   border-bottom: 1px solid var(--color-black);
-  background-color: var(--color-light-4);
+  background-color: var(--color-beige);
   padding: 0.8rem 2rem;
 }
 
@@ -1208,7 +1209,7 @@ textarea {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--color-light-4);
+  background-color: var(--color-beige);
   z-index: 20;
   opacity: 1;
   -webkit-transition: 0.5s ease-in-out;
