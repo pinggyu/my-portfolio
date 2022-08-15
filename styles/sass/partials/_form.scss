@@ -18,7 +18,7 @@
         border-bottom: 2px solid var(--color-gray-1);
         margin-bottom: clamp(2rem, 5vw, 3rem);
         padding: 0.5rem 0.25rem;
-        color: var(--color-dark-3);
+        color: var(--color-black);
         width: 100%;
         transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         font-family: var(--ff-body), sans-serif;
@@ -28,8 +28,8 @@
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
     input:-webkit-autofill:active {
-        box-shadow: 0 0 0 30px var(--color-light-2) inset !important;
-        -webkit-text-fill-color: var(--color-dark-3) !important;
+        box-shadow: 0 0 0 30px var(--color-beige) inset !important;
+        -webkit-text-fill-color: var(--color-black) !important;
     }
 
     .formRow {
@@ -57,11 +57,11 @@
 
     .inputLabelFocused {
         transform: scale(0.9) translateY(-1.7rem);
-        color: var(--color-dark-3);
+        color: var(--color-black);
     }
 
     .formInputFocused {
-        border-color: var(--color-dark-3);
+        border-color: var(--color-black);
     }
 
     .formTitle {

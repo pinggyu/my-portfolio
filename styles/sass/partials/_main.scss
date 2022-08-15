@@ -15,10 +15,6 @@ section {
  * ABOUT SECTION
  * ======================== */
 
-.about {
-    background-color: var(--color-light-2);
-}
-
 .aboutSection {
     display: flex;
     gap: clamp(2rem, 5vw, 4rem);
@@ -54,7 +50,7 @@ section {
     gap: 1.5rem;
     flex: 1;
     @media screen and (max-width: 1125px) {
-        border-top: 1px solid var(--color-dark-3);
+        border-top: 1px solid var(--color-black);
         padding-top: 2rem;
     }
 }
@@ -73,10 +69,6 @@ section {
 /* =========================
  * PROJECTS SECTION
  * ======================== */
-
-.projects {
-    background-color: var(--color-light-3);
-}
 
 .projectsSection {
     display: grid;
@@ -103,14 +95,14 @@ section {
     display: none;
     @media screen and (max-width: 1000px) {
         display: block;
-        border: 0.15rem solid var(--color-dark-3);
+        border: 0.15rem solid var(--color-black);
     }
 }
 
 .projectDemo {
     .projectVideo {
         width: 100%;
-        border: 2px solid var(--color-dark-3);
+        border: 2px solid var(--color-black);
         opacity: 0.85;
         transition: 0.3s;
         &:hover,
@@ -169,7 +161,6 @@ section {
  * ======================== */
 
 .contact {
-    background-color: var(--color-light-4);
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -221,7 +212,7 @@ section {
     font-size: clamp(1.4rem, 5vw, 2.25rem);
     cursor: pointer;
     background-color: transparent;
-    color: var(--color-dark-3);
+    color: var(--color-black);
     border: none;
     font-weight: 400;
     &:hover,
@@ -249,7 +240,7 @@ section {
     position: absolute;
     pointer-events: none;
     border-color: rgba(218, 218, 218, 0);
-    border-right-color: var(--color-dark-3);
+    border-right-color: var(--color-black);
     border-width: 10px;
     margin-top: -5px;
 }
@@ -289,7 +280,7 @@ section {
     padding: clamp(1.2rem, 3vw, 1.7rem);
     border: 1px solid var(--color-gray-1);
     border-radius: 50%;
-    color: var(--color-dark-3);
+    color: var(--color-black);
     transition: 0.3s;
     width: 50px;
     height: 50px;

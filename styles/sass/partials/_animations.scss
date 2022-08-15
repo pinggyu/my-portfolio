@@ -2,7 +2,7 @@
 .hoverUnderline {
     display: inline-block;
     position: relative;
-    color: var(--color-dark-3);
+    color: var(--color-black);
 }
 
 .hoverUnderline:after {
@@ -13,7 +13,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--color-dark-3);
+    background-color: var(--color-black);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
 }

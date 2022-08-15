@@ -246,8 +246,8 @@ html {
 
 body {
   font-family: var(--ff-body), sans-serif;
-  background-color: var(--color-light-4);
-  color: var(--color-dark-3);
+  background-color: var(--color-beige);
+  color: var(--color-black);
   font-weight: 300;
   font-size: 0.9rem;
   letter-spacing: 1px;
@@ -319,10 +319,10 @@ p {
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.6rem;
-  border: 2px solid var(--color-dark-3);
+  border: 2px solid var(--color-black);
   cursor: pointer;
-  background-color: var(--color-dark-3);
-  color: var(--color-light-2);
+  background-color: var(--color-black);
+  color: var(--color-beige);
   text-align: center;
   padding: 1rem 1.5rem;
   -webkit-transition: 0.3s;
@@ -360,11 +360,11 @@ p {
 }
 
 :root {
-  --color-dark-3: #333333;
-  --color-light-2: #eeece6;
-  --color-light-3: #f2f1ed;
-  --color-light-4: #f7f6f3;
+  --color-black: #333333;
+  --color-beige: #f7f6f3;
+  --color-white: #FFFFFF;
   --color-gray-1: #888888;
+  --color-gray-2: #f4f4f4;
   /* Typography */
   --ff-body: "Inter";
   --ff-heading: "Butler";
@@ -435,7 +435,7 @@ header {
           flex-direction: column;
 }
 header h2 {
-  color: var(--color-dark-3);
+  color: var(--color-black);
   text-align: center;
   padding-top: 1.5rem;
 }
@@ -461,7 +461,7 @@ header h2 {
 }
 
 .logo a {
-  color: var(--color-dark-3);
+  color: var(--color-black);
   font-family: var(--ff-heading), serif;
   font-weight: 400;
   font-size: 1.2rem;
@@ -473,7 +473,7 @@ header h2 {
 .scrollDownIcon {
   position: absolute;
   left: 0;
-  bottom: 50px;
+  bottom: 5rem;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -508,7 +508,7 @@ h1:after {
   height: 2px;
   width: 100%;
   content: "";
-  background: var(--color-dark-3);
+  background: var(--color-black);
   display: block;
   position: absolute;
   -webkit-transition: width 0.4s ease;
@@ -554,10 +554,6 @@ section {
 /* =========================
  * ABOUT SECTION
  * ======================== */
-.about {
-  background-color: var(--color-light-2);
-}
-
 .aboutSection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -618,7 +614,7 @@ section {
 }
 @media screen and (max-width: 1125px) {
   .skillsSubsection {
-    border-top: 1px solid var(--color-dark-3);
+    border-top: 1px solid var(--color-black);
     padding-top: 2rem;
   }
 }
@@ -640,9 +636,9 @@ section {
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6rem;
-  border: 1px solid var(--color-dark-3);
+  border: 1px solid var(--color-black);
   background-color: transparent;
-  color: var(--color-dark-3);
+  color: var(--color-black);
   text-align: center;
   padding: 0.1rem 0.5rem;
 }
@@ -655,10 +651,6 @@ section {
 /* =========================
  * PROJECTS SECTION
  * ======================== */
-.projects {
-  background-color: var(--color-light-3);
-}
-
 .projectsSection {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -690,13 +682,13 @@ section {
 @media screen and (max-width: 1000px) {
   .projectScreenshot {
     display: block;
-    border: 0.15rem solid var(--color-dark-3);
+    border: 0.15rem solid var(--color-black);
   }
 }
 
 .projectDemo .projectVideo {
   width: 100%;
-  border: 2px solid var(--color-dark-3);
+  border: 2px solid var(--color-black);
   opacity: 0.85;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -770,10 +762,10 @@ section {
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.6rem;
-  border: 2px solid var(--color-dark-3);
+  border: 2px solid var(--color-black);
   cursor: pointer;
-  background-color: var(--color-dark-3);
-  color: var(--color-light-2);
+  background-color: var(--color-black);
+  color: var(--color-beige);
   text-align: center;
   padding: 1rem 1.5rem;
   -webkit-transition: 0.3s;
@@ -786,7 +778,7 @@ section {
 }
 
 .linkBtn {
-  color: var(--color-dark-3);
+  color: var(--color-black);
   font-weight: 400;
   line-height: 2rem;
   text-transform: uppercase;
@@ -795,9 +787,6 @@ section {
 /* =========================
  * CONTACT SECTION
  * ======================== */
-.contact {
-  background-color: var(--color-light-4);
-}
 .contact .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -870,7 +859,7 @@ section {
   font-size: clamp(1.4rem, 5vw, 2.25rem);
   cursor: pointer;
   background-color: transparent;
-  color: var(--color-dark-3);
+  color: var(--color-black);
   border: none;
   font-weight: 400;
 }
@@ -889,10 +878,10 @@ section {
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.6rem;
-  border: 2px solid var(--color-dark-3);
+  border: 2px solid var(--color-black);
   cursor: pointer;
-  background-color: var(--color-dark-3);
-  color: var(--color-light-2);
+  background-color: var(--color-black);
+  color: var(--color-beige);
   text-align: center;
   padding: 1rem 1.5rem;
   -webkit-transition: 0.3s;
@@ -914,7 +903,7 @@ section {
   position: absolute;
   pointer-events: none;
   border-color: rgba(218, 218, 218, 0);
-  border-right-color: var(--color-dark-3);
+  border-right-color: var(--color-black);
   border-width: 10px;
   margin-top: -5px;
 }
@@ -954,7 +943,7 @@ section {
   padding: clamp(1.2rem, 3vw, 1.7rem);
   border: 1px solid var(--color-gray-1);
   border-radius: 50%;
-  color: var(--color-dark-3);
+  color: var(--color-black);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   width: 50px;
@@ -1001,7 +990,7 @@ section {
   border-bottom: 2px solid var(--color-gray-1);
   margin-bottom: clamp(2rem, 5vw, 3rem);
   padding: 0.5rem 0.25rem;
-  color: var(--color-dark-3);
+  color: var(--color-black);
   width: 100%;
   -webkit-transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -1011,9 +1000,9 @@ section {
 .contactForm input:-webkit-autofill:hover,
 .contactForm input:-webkit-autofill:focus,
 .contactForm input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px var(--color-light-2) inset !important;
-          box-shadow: 0 0 0 30px var(--color-light-2) inset !important;
-  -webkit-text-fill-color: var(--color-dark-3) !important;
+  -webkit-box-shadow: 0 0 0 30px var(--color-beige) inset !important;
+          box-shadow: 0 0 0 30px var(--color-beige) inset !important;
+  -webkit-text-fill-color: var(--color-black) !important;
 }
 .contactForm .formRow {
   position: relative;
@@ -1043,10 +1032,10 @@ section {
 .contactForm .inputLabelFocused {
   -webkit-transform: scale(0.9) translateY(-1.7rem);
           transform: scale(0.9) translateY(-1.7rem);
-  color: var(--color-dark-3);
+  color: var(--color-black);
 }
 .contactForm .formInputFocused {
-  border-color: var(--color-dark-3);
+  border-color: var(--color-black);
 }
 .contactForm .formTitle {
   padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
@@ -1064,7 +1053,7 @@ textarea {
 .hoverUnderline {
   display: inline-block;
   position: relative;
-  color: var(--color-dark-3);
+  color: var(--color-black);
 }
 
 .hoverUnderline:after {
@@ -1076,7 +1065,7 @@ textarea {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--color-dark-3);
+  background-color: var(--color-black);
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
   -webkit-transition: -webkit-transform 0.3s ease-out;
@@ -1161,7 +1150,7 @@ textarea {
 }
 
 .mainNav.scrolled {
-  border-bottom: 1px solid var(--color-dark-3);
+  border-bottom: 1px solid var(--color-black);
   background-color: var(--color-light-4);
   padding: 0.8rem 2rem;
 }
@@ -1179,7 +1168,7 @@ textarea {
   gap: 2rem;
 }
 .navLinks a {
-  color: var(--color-dark-3);
+  color: var(--color-black);
 }
 
 .mobileNavLinks {
@@ -1205,7 +1194,7 @@ textarea {
   font-size: 2.7rem;
   line-height: 3.2rem;
   text-align: center;
-  color: var(--color-dark-3);
+  color: var(--color-black);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -1276,7 +1265,7 @@ textarea {
   display: block;
   position: absolute;
   height: 2px;
-  background-color: var(--color-dark-3);
+  background-color: var(--color-black);
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   width: 100%;
