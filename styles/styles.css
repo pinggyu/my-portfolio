@@ -855,16 +855,19 @@ section {
   position: relative;
 }
 
-.clickToCopyBtn, .clickToCopyBackup {
+.clickToCopyBtn,
+.clickToCopyBackup {
   font-family: var(--ff-heading), serif;
-  font-size: clamp(1.4rem, 5vw, 2.25rem);
+  font-size: clamp(1.1rem, 5vw, 2rem);
   cursor: pointer;
   background-color: transparent;
   color: var(--color-black);
   border: none;
   font-weight: 400;
 }
-.clickToCopyBtn:hover, .clickToCopyBtn:focus, .clickToCopyBackup:hover, .clickToCopyBackup:focus {
+.clickToCopyBtn:hover, .clickToCopyBtn:focus,
+.clickToCopyBackup:hover,
+.clickToCopyBackup:focus {
   color: var(--color-gray-1);
 }
 
@@ -917,7 +920,7 @@ section {
   display: none;
 }
 
-@media screen and (max-width: 1125px) {
+@media screen and (max-width: 1240px) {
   .clickToCopyBtn {
     display: none;
   }
