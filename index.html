@@ -78,7 +78,7 @@
             <img
               class="scrollDownIcon"
               id="scrollDownIcon"
-              src="./assets/images/scrollDown.svg"
+              src="./assets/images/scroll-down.svg"
               alt="Scroll Down Icon"
             />
           </a>
@@ -139,14 +139,52 @@
           <h4>Recent Projects</h4>
           <p class="hoverMsg accentText">( Hover to view the project demos )</p>
           <ul class="projectsSection">
-            <!-- Project 1 -->
+            <!-- Project 3 -->
+            <li class="projectDetails">
+              <div class="projectText">
+                <h4 class="projectName">Travelsheets</h4>
+                <div class="projectTools">
+                  <ul class="projectToolsList">
+                    <li class="tag">HTML</li>
+                    <li class="tag">CSS</li>
+                    <li class="tag">React</li>
+                    <li class="tag">Firebase</li>
+                    <li class="tag">RESTful API</li>
+                  </ul>
+                </div>
+                <p class="projectSummary">
+                  Travelsheets is a travel board where users can share activities to do in various cities. It generates
+                  stock photos for new locations using the Unsplash API and integrates a profanity filtering API as
+                  well. The application leverages Firebase Authentication and Realtime Database to store user and cities
+                  data. It also utilizes various React functionalities (Router, useState, useEffect, useContext).
+                </p>
+              </div>
+              <div class="projectLinks">
+                <a href="https://uptravel.netlify.app/login" class="linkBtn hoverUnderline">Live Site →</a>
+                <a href="https://github.com/pinggyu/ping-yu-project-three" class="linkBtn hoverUnderline"
+                  >View Code →</a
+                >
+              </div>
+            </li>
+            <li class="projectDemo" data-aos="fade-up-left" data-aos-duration="1200">
+              <video class="projectVideo">
+                <source src="./assets/images/travelsheets.mp4" loop muted="muted" />
+                Your browser does not support the HTML5 video element.
+              </video>
+              <img
+                src="./assets/images/travelsheets.jpg"
+                class="projectScreenshot"
+                alt="Screenshot of the Travelsheets website"
+              />
+            </li>
+            <!-- Project 2 -->
             <li class="projectDemo" data-aos="fade-up-right" data-aos-duration="1200">
               <video class="projectVideo">
                 <source src="./assets/images/jobseekr.mp4" loop muted="muted" />
                 Your browser does not support the HTML5 video element.
               </video>
               <img
-                src="./assets/images/JobSeekrScreenshot.png"
+                src="./assets/images/jobseekr.png"
                 class="projectScreenshot"
                 alt="Screenshot of the JobSeekr website"
               />
@@ -173,7 +211,7 @@
                 <a href="https://github.com/ping-ryan/jobseekr" class="linkBtn hoverUnderline">View Code →</a>
               </div>
             </li>
-            <!-- Project 2 -->
+            <!-- Project 1 -->
             <li class="projectDetails">
               <div class="projectText">
                 <h4 class="projectName">Willow</h4>
@@ -201,7 +239,7 @@
                 Your browser does not support the HTML5 video element.
               </video>
               <img
-                src="./assets/images/WillowScreenshot.png"
+                src="./assets/images/willow.jpg"
                 class="projectScreenshot"
                 alt="Screenshot of the Willow Blog website"
               />

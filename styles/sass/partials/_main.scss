@@ -87,16 +87,16 @@ section {
 
 .hoverMsg {
   display: block;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1300px) {
     display: none;
   }
 }
 
 .projectScreenshot {
   display: none;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1300px) {
     display: block;
-    border: 0.15rem solid var(--color-black);
+    border: 1px solid var(--color-black);
   }
 }
 
@@ -110,7 +110,7 @@ section {
     &:focus {
       opacity: 1;
     }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1300px) {
       display: none;
     }
   }
