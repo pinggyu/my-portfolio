@@ -663,8 +663,11 @@ section {
   .projectsSection {
     grid-template-columns: 100%;
   }
-  .projectsSection > li:nth-of-type(4) {
-    grid-row-start: 3;
+  .projectsSection > li:nth-of-type(2) {
+    grid-row-start: 1;
+  }
+  .projectsSection > li:nth-of-type(6) {
+    grid-row-start: 5;
   }
 }
 
