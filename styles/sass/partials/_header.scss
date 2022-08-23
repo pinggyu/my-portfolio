@@ -1,5 +1,3 @@
-// header design inspiration from https://dribbble.com/shots/17301705-Developer-portfolio-pageload
-
 header {
   min-height: 100vh;
   display: flex;
@@ -36,6 +34,7 @@ header {
     font-size: 1rem;
     letter-spacing: 0;
     width: 300px;
+    text-align: right;
   }
 }
 
@@ -53,15 +52,17 @@ header {
   align-items: center;
   position: relative;
   flex: 1;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-direction: column-reverse;
   margin-top: 75px;
 }
 
 .logo {
+  border: 2px solid var(--color-black);
+  padding: 0.3rem;
   a {
     color: var(--color-black);
-    font-family: var(--ff-heading), sans-serif;
+    font-family: var(--ff-heading), serif;
     font-weight: 400;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -73,6 +74,10 @@ header {
 .scrollDownIcon {
   cursor: pointer;
   transition: 0.3s;
+}
+
+.scrollDownIcon:hover {
+  transform: scale(0.8);
 }
 
 h1 {
@@ -103,12 +108,9 @@ h1 {
   .scrollDownIcon {
     width: 2rem;
   }
-  .headerMainContent {
-    gap: 1.5rem;
-  }
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1250px) {
   .blurb span {
     display: none;
   }

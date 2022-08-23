@@ -263,7 +263,7 @@ body {
  * ======================== */
 h1,
 h3 {
-  font-family: var(--ff-heading), sans-serif;
+  font-family: var(--ff-heading), serif;
   text-transform: uppercase;
 }
 
@@ -276,18 +276,18 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(4.5rem, 13vw, 7rem);
-  font-weight: 400;
-  letter-spacing: -5px;
+  font-size: clamp(4.5rem, 13vw, 6rem);
+  font-weight: 350;
+  letter-spacing: -2px;
   line-height: 0.9;
 }
 
 h2 {
-  font-family: var(--ff-heading), sans-serif;
-  font-size: clamp(2.5rem, 13vw, 7rem);
+  font-family: var(--ff-heading), serif;
+  font-size: clamp(2.5rem, 13vw, 6rem);
   text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: -5px;
+  font-weight: 350;
+  letter-spacing: -2px;
 }
 
 h3 {
@@ -365,7 +365,7 @@ p {
   --color-gray-2: #f4f4f4;
   /* Typography */
   --ff-body: "Inter";
-  --ff-heading: "Lato";
+  --ff-heading: "Butler";
 }
 
 .wrapper {
@@ -476,6 +476,7 @@ header {
   font-size: 1rem;
   letter-spacing: 0;
   width: 300px;
+  text-align: right;
 }
 
 .headerContent {
@@ -506,7 +507,7 @@ header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  gap: 2rem;
+  gap: 1.5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -514,9 +515,13 @@ header {
   margin-top: 75px;
 }
 
+.logo {
+  border: 2px solid var(--color-black);
+  padding: 0.3rem;
+}
 .logo a {
   color: var(--color-black);
-  font-family: var(--ff-heading), sans-serif;
+  font-family: var(--ff-heading), serif;
   font-weight: 400;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -528,6 +533,11 @@ header {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.scrollDownIcon:hover {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 h1 {
@@ -565,20 +575,29 @@ h2 {
   .scrollDownIcon {
     width: 2rem;
   }
-  .headerMainContent {
-    gap: 1.5rem;
-  }
 }
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1250px) {
   .blurb span {
     display: none;
   }
 }
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   padding: 1rem;
   background-color: var(--color-beige);
   border-top: 1px solid var(--color-gray-1);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+footer a {
+  font-weight: 500;
+  text-transform: uppercase;
 }
 footer .copyright {
   text-transform: uppercase;
@@ -908,7 +927,7 @@ section {
 
 .clickToCopyBtn,
 .clickToCopyBackup {
-  font-family: var(--ff-heading), sans-serif;
+  font-family: var(--ff-heading), serif;
   font-size: clamp(1.1rem, 5vw, 2rem);
   cursor: pointer;
   background-color: transparent;
@@ -1224,6 +1243,7 @@ textarea {
 }
 .navLinks a {
   color: var(--color-black);
+  font-weight: 600;
 }
 
 .mobileNavLinks {
@@ -1243,7 +1263,7 @@ textarea {
   height: 100vh;
 }
 .mobileNavLinks li a {
-  font-family: var(--ff-heading), sans-serif;
+  font-family: var(--ff-heading), serif;
   font-style: normal;
   font-weight: 300;
   font-size: 2.7rem;
