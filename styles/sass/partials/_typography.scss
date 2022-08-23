@@ -3,30 +3,27 @@
  * ======================== */
 
 @font-face {
-    font-family: "Butler";
-    src: url('../assets/fonts/butler/Butler_Regular.otf'),
-    url('../assets/fonts/butler/Butler.woff'),
+  font-family: 'Butler';
+  src: url('../assets/fonts/butler/Butler_Regular.otf'), url('../assets/fonts/butler/Butler.woff'),
     url('../assets/fonts/butler/Butler.woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Butler";
-    src: url('../assets/fonts/butler/Butler_Light.otf'),
-        url('../assets/fonts/butler/Butler-Light.woff'),
-        url('../assets/fonts/butler/Butler-Light.woff2');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Butler';
+  src: url('../assets/fonts/butler/Butler_Light.otf'), url('../assets/fonts/butler/Butler-Light.woff'),
+    url('../assets/fonts/butler/Butler-Light.woff2');
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Butler";
-    src: url('../assets/fonts/butler/Butler_Ultra_Light.otf'),
-        url('../assets/fonts/butler/Butler-UltraLight.woff'),
-        url('../assets/fonts/butler/Butler-UltraLight.woff2');
-    font-weight: 200;
-    font-style: normal;
+  font-family: 'Butler';
+  src: url('../assets/fonts/butler/Butler_Ultra_Light.otf'), url('../assets/fonts/butler/Butler-UltraLight.woff'),
+    url('../assets/fonts/butler/Butler-UltraLight.woff2');
+  font-weight: 200;
+  font-style: normal;
 }
 
 /* =========================
@@ -34,19 +31,19 @@
  * ======================== */
 
 html {
-    font-size: 125%;
+  font-size: 125%;
 }
 
 body {
-    font-family: var(--ff-body), sans-serif;
-    background-color: var(--color-beige);
-    color: var(--color-black);
-    font-weight: 300;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    @media screen and (max-width: 800px) {
-        font-size: 0.8rem;
-    }
+  font-family: var(--ff-body), sans-serif;
+  background-color: var(--color-beige);
+  color: var(--color-black);
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  @media screen and (max-width: 800px) {
+    font-size: 0.8rem;
+  }
 }
 
 /* =========================
@@ -55,86 +52,82 @@ body {
 
 h1,
 h3 {
-    font-family: var(--ff-heading), serif;
-    text-transform: uppercase;
-    font-weight: 250;
-    @media screen and (max-width: 1125px) {
-        font-weight: 300;
-    }
+  font-family: var(--ff-heading), sans-serif;
+  text-transform: uppercase;
 }
 
 h4,
 h5,
 h6 {
-    font-family: var(--ff-body), sans-serif;
-    text-transform: uppercase;
-    font-weight: 600;
+  font-family: var(--ff-body), sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 h1 {
-    font-size: clamp(4.5rem,13vw,8.5rem);
-    font-weight: 250;
-    letter-spacing: -2px;
-    line-height: 1;
+  font-size: clamp(4.5rem, 13vw, 7rem);
+  font-weight: 400;
+  letter-spacing: -5px;
+  line-height: 0.9;
 }
 
 h2 {
-    font-family: var(--ff-body), sans-serif;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    text-transform: uppercase;
-    font-weight: 400;
+  font-family: var(--ff-heading), sans-serif;
+  font-size: clamp(2.5rem, 13vw, 7rem);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: -5px;
 }
 
 h3 {
-    font-size: clamp(2.3rem, 5vw, 4.3rem);
+  font-size: clamp(2.3rem, 5vw, 4.3rem);
+  font-weight: 375;
+  letter-spacing: -2px;
 }
 
 h4 {
-    font-size: clamp(1rem, 5vw, 1.3rem);
-    font-weight: 400;
-    line-height: 1.5;
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 p {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 /* =========================
  * Links & buttons
  * ======================== */
 
- .button, .submitBtn {
-    @include borderButtonStyle;
- }
+.button,
+.submitBtn {
+  @include borderButtonStyle;
+}
 
- .material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 500,
-    'GRAD' 0,
-    'opsz' 48
- }
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 48;
+}
 
- /* =========================
+/* =========================
  * For specific design purpose
  * ======================== */
 
 //  To introduce a topic
 .smallCaps {
-    font-family: var(--ff-body), sans-serif;
-    text-transform: uppercase;
-    color: var(--color-gray-1);
-    font-weight: 600;
-    font-size: 0.6rem;;
-    line-height: 0.8rem;
-    letter-spacing: 2px;
+  font-family: var(--ff-body), sans-serif;
+  text-transform: uppercase;
+  color: var(--color-gray-1);
+  font-weight: 600;
+  font-size: 0.6rem;
+  line-height: 0.8rem;
+  letter-spacing: 2px;
 }
 
 // Accent text
 .accentText {
-    font-family: var(--ff-body), sans-serif;
-    color: var(--color-dark-4);
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.6rem;
+  font-family: var(--ff-body), sans-serif;
+  color: var(--color-dark-4);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.6rem;
 }

@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
     <!-- FontAwesome & Google Icons -->
     <script src="https://kit.fontawesome.com/f21b5dfadd.js" crossorigin="anonymous"></script>
     <link
@@ -69,19 +70,29 @@
       </div>
       <!-- Header -->
       <div class="headerMainContent wrapper">
-        <div id="name" class="isLoading">
-          <h1>Ping Yu</h1>
+        <div class="headerContent">
+          <div class="scrollDownContainer">
+            <a href="#mainContent">
+              <img
+                class="scrollDownIcon"
+                id="scrollDownIcon"
+                src="./assets/images/scroll-arrow.svg"
+                alt="Scroll Down Icon"
+              />
+            </a>
+          </div>
+          <div class="blurb">
+            <span> I build responsive and accessible websites with clean code </span>
+          </div>
+          <div class="name" data-aos="fade-up" data-aos-duration="900">
+            <h1>Ping Yu</h1>
+          </div>
         </div>
-        <h2 data-aos="fade-down" data-aos-duration="900">Software Developer</h2>
-        <div class="scrollDownContainer">
-          <a href="#mainContent">
-            <img
-              class="scrollDownIcon"
-              id="scrollDownIcon"
-              src="./assets/images/scroll-down.svg"
-              alt="Scroll Down Icon"
-            />
-          </a>
+        <div class="coverPhoto" data-aos="fade-up-right" data-aos-duration="1500">
+          <img src="./assets/images/coverphoto.JPG" alt="Profile photo" />
+        </div>
+        <div class="role" data-aos="fade-up" data-aos-duration="900">
+          <h2>Frontend Developer</h2>
         </div>
       </div>
     </header>
@@ -328,7 +339,7 @@
       </section>
     </main>
     <footer>
-      <p class="copyright">Ⓒ 2022 - Designed & developed by Ping Yu</p>
+      <p class="copyright">Ⓒ 2022 - Developed by Ping Yu</p>
     </footer>
   </body>
 </html>

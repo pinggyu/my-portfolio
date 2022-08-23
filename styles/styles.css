@@ -263,15 +263,8 @@ body {
  * ======================== */
 h1,
 h3 {
-  font-family: var(--ff-heading), serif;
+  font-family: var(--ff-heading), sans-serif;
   text-transform: uppercase;
-  font-weight: 250;
-}
-@media screen and (max-width: 1125px) {
-  h1,
-h3 {
-    font-weight: 300;
-  }
 }
 
 h4,
@@ -283,21 +276,24 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(4.5rem, 13vw, 8.5rem);
-  font-weight: 250;
-  letter-spacing: -2px;
-  line-height: 1;
+  font-size: clamp(4.5rem, 13vw, 7rem);
+  font-weight: 400;
+  letter-spacing: -5px;
+  line-height: 0.9;
 }
 
 h2 {
-  font-family: var(--ff-body), sans-serif;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-family: var(--ff-heading), sans-serif;
+  font-size: clamp(2.5rem, 13vw, 7rem);
   text-transform: uppercase;
   font-weight: 400;
+  letter-spacing: -5px;
 }
 
 h3 {
   font-size: clamp(2.3rem, 5vw, 4.3rem);
+  font-weight: 375;
+  letter-spacing: -2px;
 }
 
 h4 {
@@ -313,7 +309,8 @@ p {
 /* =========================
  * Links & buttons
  * ======================== */
-.button, .submitBtn {
+.button,
+.submitBtn {
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -329,7 +326,8 @@ p {
   transition: 0.3s;
 }
 @media screen and (max-width: 800px) {
-  .button, .submitBtn {
+  .button,
+.submitBtn {
     padding: 0.5rem 1rem;
   }
 }
@@ -339,8 +337,8 @@ p {
 }
 
 /* =========================
-* For specific design purpose
-* ======================== */
+ * For specific design purpose
+ * ======================== */
 .smallCaps {
   font-family: var(--ff-body), sans-serif;
   text-transform: uppercase;
@@ -362,16 +360,16 @@ p {
 :root {
   --color-black: #333333;
   --color-beige: #f7f6f3;
-  --color-white: #FFFFFF;
+  --color-white: #ffffff;
   --color-gray-1: #888888;
   --color-gray-2: #f4f4f4;
   /* Typography */
   --ff-body: "Inter";
-  --ff-heading: "Butler";
+  --ff-heading: "Lato";
 }
 
 .wrapper {
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
   width: 85%;
 }
@@ -434,10 +432,64 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-header h2 {
+
+.role {
+  width: 100%;
+  line-height: 0.9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.role h2 {
   color: var(--color-black);
-  text-align: center;
-  padding-top: 1.5rem;
+  text-align: left;
+  width: 70%;
+}
+
+.coverPhoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.coverPhoto img {
+  width: 50%;
+}
+
+.blurb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.blurb span {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0;
+  width: 300px;
+}
+
+.headerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
 }
 
 .headerMainContent {
@@ -454,15 +506,17 @@ header h2 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  gap: 2rem;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin-top: 75px;
 }
 
 .logo a {
   color: var(--color-black);
-  font-family: var(--ff-heading), serif;
+  font-family: var(--ff-heading), sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -471,23 +525,15 @@ header h2 {
 }
 
 .scrollDownIcon {
-  position: absolute;
-  left: 0;
-  bottom: 5rem;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-@media screen and (max-width: 800px) {
-  .scrollDownIcon {
-    display: none;
-  }
 }
 
 h1 {
   margin: 0;
   padding: 0;
-  text-align: center;
+  text-align: right;
   position: relative;
   opacity: 1;
   -webkit-transform: scale(1);
@@ -498,34 +544,36 @@ h1 {
   transition: transform 0.5s ease, opacity 1s ease, -webkit-transform 0.5s ease;
 }
 
-.isLoading h1 {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  opacity: 0;
+@media screen and (max-width: 525px) {
+  .headerContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .coverPhoto img {
+    width: 100%;
+  }
+  h1,
+h2 {
+    text-align: center;
+  }
+  .role h2 {
+    text-align: center;
+    width: 100%;
+  }
+  .scrollDownIcon {
+    width: 2rem;
+  }
+  .headerMainContent {
+    gap: 1.5rem;
+  }
 }
-
-h1:after {
-  height: 2px;
-  width: 100%;
-  content: "";
-  background: var(--color-black);
-  display: block;
-  position: absolute;
-  -webkit-transition: width 0.4s ease;
-  transition: width 0.4s ease;
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
+@media screen and (max-width: 1110px) {
+  .blurb span {
+    display: none;
+  }
 }
-
-h1:after {
-  bottom: 0;
-  left: 0;
-}
-
-.isLoading h1:after {
-  width: 0;
-}
-
 footer {
   text-align: center;
   padding: 1rem;
@@ -860,7 +908,7 @@ section {
 
 .clickToCopyBtn,
 .clickToCopyBackup {
-  font-family: var(--ff-heading), serif;
+  font-family: var(--ff-heading), sans-serif;
   font-size: clamp(1.1rem, 5vw, 2rem);
   cursor: pointer;
   background-color: transparent;
@@ -1195,7 +1243,7 @@ textarea {
   height: 100vh;
 }
 .mobileNavLinks li a {
-  font-family: var(--ff-heading), serif;
+  font-family: var(--ff-heading), sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 2.7rem;
