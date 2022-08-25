@@ -4,11 +4,11 @@
 
 // H1 animation
 
-document.addEventListener('DOMContentLoaded', function (event) {
-  setTimeout(function () {
-    document.getElementById('name').classList.remove('isLoading');
-  }, 100);
-});
+// document.addEventListener('DOMContentLoaded', function (event) {
+//   setTimeout(function () {
+//     document.getElementById('name').classList.remove('isLoading');
+//   }, 100);
+// });
 
 // Mobile slide-out navigation & disable scroll when menu modal is open
 const menuBtn = document.getElementById('menuBtn');
@@ -51,6 +51,34 @@ window.onscroll = function () {
   //   scrollRotate();
   scrollFunction();
 };
+
+// cover photo animation
+
+gsap.registerPlugin(ScrollTrigger);
+
+let revealContainers = document.querySelectorAll('.reveal');
+
+revealContainers.forEach((container) => {
+  let image = container.querySelector('img');
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container,
+      toggleActions: 'restart none none reset',
+    },
+  });
+
+  tl.set(container, { autoAlpha: 1 });
+  tl.from(container, 1.5, {
+    xPercent: -100,
+    ease: Power2.out,
+  });
+  tl.from(image, 1.5, {
+    xPercent: 100,
+    scale: 1.3,
+    delay: -1.5,
+    ease: Power2.out,
+  });
+});
 
 /* ===============================================
  * PROJECTS SECTION

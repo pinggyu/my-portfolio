@@ -15,15 +15,6 @@ header {
   }
 }
 
-.coverPhoto {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  img {
-    width: 50%;
-  }
-}
-
 .blurb {
   display: flex;
   justify-content: center;
@@ -54,7 +45,8 @@ header {
   flex: 1;
   gap: 1.5rem;
   flex-direction: column-reverse;
-  margin-top: 75px;
+  margin-top: 100px;
+  padding: 1.5rem 0;
 }
 
 .logo {
@@ -108,10 +100,33 @@ h1 {
   .scrollDownIcon {
     width: 2rem;
   }
+  .reveal {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 720px) {
   .blurb span {
     display: none;
   }
+}
+
+// cover photo animation using GSAP (adapted from https://codepen.io/cameronknight/pen/pogQKwR)
+.reveal {
+  visibility: hidden;
+  position: relative;
+  overflow: hidden;
+  img {
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+    transform-origin: left;
+  }
+}
+
+.coverPhoto {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
 }
