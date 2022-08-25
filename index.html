@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
     <!-- FontAwesome & Google Icons -->
     <script src="https://kit.fontawesome.com/f21b5dfadd.js" crossorigin="anonymous"></script>
     <link
@@ -33,23 +34,23 @@
     <title>Ping Yu</title>
   </head>
   <body data-aos-easing="ease" data-aos-offset="200" data-aos-delay="200">
-    <header>
+    <header id="home">
       <!-- Main Nav -->
       <div class="mainNav" id="mainNav">
         <!-- Logo -->
-        <div class="logo" data-aos="fade-right" data-aos-duration="1200">
+        <div class="logo" data-aos="fade-down" data-aos-duration="1200">
           <a href="/">PY</a>
         </div>
         <!-- Desktop Nav -->
-        <nav class="desktopNav">
-          <ul class="navLinks" data-aos="fade-left" data-aos-duration="1200">
+        <nav class="desktopNav" data-aos="fade-down" data-aos-duration="1200">
+          <ul class="navLinks">
             <li class="linkBtn hoverUnderline"><a href="#about">About</a></li>
             <li class="linkBtn hoverUnderline"><a href="#projects">Portfolio</a></li>
             <li class="linkBtn hoverUnderline"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
         <!-- Mobile Nav Menu Btn -->
-        <div class="mobileNavBtnContainer" data-aos="fade-left" data-aos-duration="1200">
+        <div class="mobileNavBtnContainer" data-aos="fade-down" data-aos-duration="1200">
           <button class="menuBtn" id="menuBtn">
             <span></span>
             <!-- for screen readers only -->
@@ -69,19 +70,29 @@
       </div>
       <!-- Header -->
       <div class="headerMainContent wrapper">
-        <div id="name" class="isLoading">
-          <h1>Ping Yu</h1>
+        <div class="headerContent">
+          <div class="scrollDownContainer" data-aos="fade-down" data-aos-duration="900">
+            <a href="#mainContent">
+              <img
+                class="scrollDownIcon"
+                id="scrollDownIcon"
+                src="./assets/images/scroll-down.svg"
+                alt="Scroll Down Icon"
+              />
+            </a>
+          </div>
+          <div class="name" data-aos="fade-up" data-aos-duration="900">
+            <h1>Ping Yu</h1>
+          </div>
         </div>
-        <h2 data-aos="fade-down" data-aos-duration="900">Software Developer</h2>
-        <div class="scrollDownContainer">
-          <a href="#mainContent">
-            <img
-              class="scrollDownIcon"
-              id="scrollDownIcon"
-              src="./assets/images/scroll-down.svg"
-              alt="Scroll Down Icon"
-            />
-          </a>
+        <div class="coverPhoto">
+          <img src="./assets/images/coverphoto.JPG" alt="Profile photo" />
+        </div>
+        <div class="role">
+          <h2 data-aos="fade-up" data-aos-duration="900">Frontend Developer</h2>
+          <div class="blurb">
+            <span> I build responsive and accessible websites with clean code </span>
+          </div>
         </div>
       </div>
     </header>
@@ -328,7 +339,8 @@
       </section>
     </main>
     <footer>
-      <p class="copyright">Ⓒ 2022 - Designed & developed by Ping Yu</p>
+      <a href="#home">Back to the top ↑</a>
+      <p class="copyright">Ⓒ 2022 - Developed by Ping Yu</p>
     </footer>
   </body>
 </html>

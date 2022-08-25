@@ -1,80 +1,117 @@
 header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    h2 {
-        color: var(--color-black);
-        text-align: center;
-        padding-top: 1.5rem;
-    }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.role {
+  width: 100%;
+  line-height: 0.9;
+  display: flex;
+  h2 {
+    color: var(--color-black);
+    text-align: left;
+    width: 70%;
+  }
+}
+
+.coverPhoto {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  img {
+    width: 50%;
+  }
+}
+
+.blurb {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0;
+    width: 300px;
+    text-align: right;
+  }
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .headerMainContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex: 1;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  gap: 1.5rem;
+  flex-direction: column-reverse;
+  margin-top: 75px;
 }
 
 .logo {
-    a {
-        color: var(--color-black);
-        font-family: var(--ff-heading), serif;
-        font-weight: 400;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        position: relative;
-        top: 5px;
-    }
+  border: 2px solid var(--color-black);
+  padding: 0.3rem;
+  a {
+    color: var(--color-black);
+    font-family: var(--ff-heading), serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 5px;
+  }
 }
 
 .scrollDownIcon {
-    position: absolute;
-    left: 0;
-    bottom: 5rem;
-    cursor: pointer;
-    transition: 0.3s;
-    @media screen and (max-width: 800px) {
-        display: none;
-    }
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-// H1 animation adapted from https: //codepen.io/oksas/pen/GoGowK  
+.scrollDownIcon:hover {
+  transform: scale(0.8);
+}
 
 h1 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    position: relative;
-    opacity: 1;
-    transform: scale(1);
-    transition: transform 0.5s ease, opacity 1s ease;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  position: relative;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 1s ease;
 }
 
-.isLoading h1 {
-    transform: scale(0.8);
-    opacity: 0;
-}
-
-h1:after {
-    height: 2px;
+@media screen and (max-width: 525px) {
+  .headerContent {
+    flex-direction: column-reverse;
+  }
+  .coverPhoto img {
     width: 100%;
-    content: "";
-    background: var(--color-black);
-    display: block;
-    position: absolute;
-    transition: width 0.4s ease;
-    transition-delay: 0.8s;
+  }
+  h1,
+  h2 {
+    text-align: center;
+  }
+  .role h2 {
+    text-align: center;
+    width: 100%;
+  }
+  .scrollDownIcon {
+    width: 2rem;
+  }
 }
 
-h1:after {
-    bottom: 0;
-    left: 0;
+@media screen and (max-width: 1250px) {
+  .blurb span {
+    display: none;
+  }
 }
-
-.isLoading h1:after {
-    width: 0;
-}
-
