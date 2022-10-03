@@ -1,393 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-    <!-- FontAwesome & Google Icons -->
-    <script src="https://kit.fontawesome.com/f21b5dfadd.js" crossorigin="anonymous"></script>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-chrome-192x192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="./assets/favicon/android-chrome-512x512.png" />
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <!-- JS Script, load after body -->
-    <script defer src="./script.js"></script>
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
-    <title>Ping Yu</title>
-  </head>
-  <body data-aos-easing="ease" data-aos-offset="200" data-aos-delay="200">
-    <header id="home">
-      <!-- Main Nav -->
-      <div class="mainNav" id="mainNav">
-        <!-- Logo -->
-        <div class="logo" data-aos="fade-down" data-aos-duration="1200">
-          <a href="/">PY</a>
-        </div>
-        <!-- Desktop Nav -->
-        <nav class="desktopNav" data-aos="fade-down" data-aos-duration="1200">
-          <ul class="navLinks">
-            <li class="linkBtn hoverUnderline"><a href="#about">About</a></li>
-            <li class="linkBtn hoverUnderline"><a href="#projects">Portfolio</a></li>
-            <li class="linkBtn hoverUnderline"><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <!-- Mobile Nav Menu Btn -->
-        <div class="mobileNavBtnContainer" data-aos="fade-down" data-aos-duration="1200">
-          <button class="menuBtn" id="menuBtn">
-            <span></span>
-            <!-- for screen readers only -->
-            <span class="sr-only">Slide-Out Navigation Menu</span>
-          </button>
-        </div>
-      </div>
-      <!-- Mobile Nav Menu -->
-      <div class="mobileNavContainer" id="mobileNavContainer">
-        <nav class="mobileNav wrapper">
-          <ul class="mobileNavLinks">
-            <li class="mobileNavLink"><a href="#about">About</a></li>
-            <li class="mobileNavLink"><a href="#projects">Portfolio</a></li>
-            <li class="mobileNavLink"><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <!-- Header -->
-      <div class="headerMainContent wrapper">
-        <div class="headerContent">
-          <div class="scrollDownContainer">
-            <a href="#mainContent">
-              <img
-                class="scrollDownIcon"
-                id="scrollDownIcon"
-                src="./assets/images/scroll-down.svg"
-                alt="Scroll Down Icon"
-              />
-            </a>
-          </div>
-          <div class="name" data-aos="fade-up" data-aos-duration="900">
-            <h1>Ping Yu</h1>
-          </div>
-        </div>
-        <div class="coverPhoto">
-          <div class="reveal">
-            <img src="./assets/images/coverphoto.JPG" alt="Profile photo" />
-          </div>
-        </div>
-        <div class="role">
-          <h2 data-aos="fade-up" data-aos-duration="900">Frontend Developer</h2>
-          <div class="blurb" data-aos="fade-left" data-aos-duration="1200">
-            <span> I build responsive and accessible websites with clean code </span>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main id="mainContent">
-      <section class="about" id="about">
-        <div class="wrapper">
-          <h3 class="sectionTitle">About</h3>
-          <div class="aboutSection">
-            <div class="introSubsection" data-aos="fade-right" data-aos-duration="1200">
-              <h4>Hi, I'm Ping ⎯ a software developer based in Toronto, Canada.</h4>
-              <p>
-                Specializing in frontend web development, I enjoy building responsive web applications with clean and
-                accessible code. I have a Computer Science minor from McGill University and recently graduated from
-                Juno's Web Development Bootcamp. I am constantly seeking self-improvement through learning new
-                technologies and frameworks.
-              </p>
-              <p>
-                Previously, I was working in financial services and tech advisory as a CPA. With my 4+ years of
-                experience working in both internal and client-facing roles, I'm a skilled problem solver and
-                communicator who loves taking on new challenges.
-                <a href="#contact" class="contactText"> My resume is available upon request. Let's get in touch! ↓</a>
-              </p>
-              <!-- <button class="button linkButton" data-hover="View Resume →"><span class="buttonHover">View Resume →</span></button>                         -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+        <!-- FontAwesome & Google Icons -->
+        <script src="https://kit.fontawesome.com/f21b5dfadd.js" crossorigin="anonymous"></script>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="./styles/styles.css" />
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-chrome-192x192.png" />
+        <link rel="icon" type="image/png" sizes="512x512" href="./assets/favicon/android-chrome-512x512.png" />
+        <!-- AOS -->
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+        <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <!-- JS Script, load after body -->
+        <script defer src="./script.js"></script>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
+        <title>Ping Yu</title>
+    </head>
+    <body data-aos-easing="ease" data-aos-offset="200" data-aos-delay="200">
+        <header id="home">
+            <!-- Main Nav -->
+            <div class="mainNav" id="mainNav">
+                <!-- Logo -->
+                <div class="logo" data-aos="fade-down" data-aos-duration="1200">
+                    <a href="/">PY</a>
+                </div>
+                <!-- Desktop Nav -->
+                <nav class="desktopNav" data-aos="fade-down" data-aos-duration="1200">
+                    <ul class="navLinks">
+                        <li class="linkBtn hoverUnderline"><a href="#about">About</a></li>
+                        <li class="linkBtn hoverUnderline"><a href="#projects">Portfolio</a></li>
+                        <li class="linkBtn hoverUnderline"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile Nav Menu Btn -->
+                <div class="mobileNavBtnContainer" data-aos="fade-down" data-aos-duration="1200">
+                    <button class="menuBtn" id="menuBtn">
+                        <span></span>
+                        <!-- for screen readers only -->
+                        <span class="sr-only">Slide-Out Navigation Menu</span>
+                    </button>
+                </div>
             </div>
-            <div class="skillsSubsection" data-aos="fade-left" data-aos-duration="1200">
-              <h4>My Toolkit</h4>
-              <h5>( Proficient )</h5>
-              <ul class="skillsList">
-                <li class="tag">HTML</li>
-                <li class="tag">CSS</li>
-                <li class="tag">Sass</li>
-                <li class="tag">JavaScript</li>
-                <li class="tag">React</li>
-                <li class="tag">Firebase</li>
-                <li class="tag">Git</li>
-                <li class="tag">GitHub</li>
-                <li class="tag">RESTful API</li>
-                <li class="tag">Pair Programming</li>
-                <li class="tag">WCAG/Accessibility</li>
-                <li class="tag">Responsive Design</li>
-              </ul>
-              <h5>( Familiar )</h5>
-              <ul class="skillsList">
-                <li class="tag">AWS</li>
-                <li class="tag">Java</li>
-                <li class="tag">C</li>
-                <li class="tag">SQL</li>
-              </ul>
+            <!-- Mobile Nav Menu -->
+            <div class="mobileNavContainer" id="mobileNavContainer">
+                <nav class="mobileNav wrapper">
+                    <ul class="mobileNavLinks">
+                        <li class="mobileNavLink"><a href="#about">About</a></li>
+                        <li class="mobileNavLink"><a href="#projects">Portfolio</a></li>
+                        <li class="mobileNavLink"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-          </div>
-        </div>
-      </section>
+            <!-- Header -->
+            <div class="headerMainContent wrapper">
+                <div class="headerContent">
+                    <div class="scrollDownContainer">
+                        <a href="#mainContent">
+                            <img
+                                class="scrollDownIcon"
+                                id="scrollDownIcon"
+                                src="./assets/images/scroll-down.svg"
+                                alt="Scroll Down Icon"
+                            />
+                        </a>
+                    </div>
+                    <div class="name" data-aos="fade-up" data-aos-duration="900">
+                        <h1>Ping Yu</h1>
+                    </div>
+                </div>
+                <div class="coverPhoto">
+                    <div class="reveal">
+                        <img src="./assets/images/coverphoto.JPG" alt="Profile photo" />
+                    </div>
+                </div>
+                <div class="role">
+                    <h2 data-aos="fade-up" data-aos-duration="900">Frontend Developer</h2>
+                    <div class="blurb" data-aos="fade-left" data-aos-duration="1200">
+                        <span> I build responsive and accessible websites with clean code </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main id="mainContent">
+            <section class="about" id="about">
+                <div class="wrapper">
+                    <h3 class="sectionTitle">About</h3>
+                    <div class="aboutSection">
+                        <div class="introSubsection" data-aos="fade-right" data-aos-duration="1200">
+                            <h4>Hi, I'm Ping ⎯ a software developer based in Toronto, Canada.</h4>
+                            <p>
+                                Specializing in frontend web development, I enjoy building responsive web applications
+                                with clean and accessible code. I have a Computer Science minor from McGill University
+                                and recently graduated from Juno's Web Development Bootcamp. I am constantly seeking
+                                self-improvement through learning new technologies and frameworks.
+                            </p>
+                            <p>
+                                Previously, I was working in financial services and tech advisory as a CPA. With my 4+
+                                years of experience working in both internal and client-facing roles, I'm a skilled
+                                problem solver and communicator who loves taking on new challenges.
+                                <a href="#contact" class="contactText">
+                                    My resume is available upon request. Let's get in touch! ↓</a
+                                >
+                            </p>
+                            <!-- <button class="button linkButton" data-hover="View Resume →"><span class="buttonHover">View Resume →</span></button>                         -->
+                        </div>
+                        <div class="skillsSubsection" data-aos="fade-left" data-aos-duration="1200">
+                            <h4>My Toolkit</h4>
+                            <h5>( Proficient )</h5>
+                            <ul class="skillsList">
+                                <li class="tag">HTML</li>
+                                <li class="tag">CSS</li>
+                                <li class="tag">Sass</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">React</li>
+                                <li class="tag">Firebase</li>
+                                <li class="tag">Git</li>
+                                <li class="tag">GitHub</li>
+                                <li class="tag">RESTful API</li>
+                                <li class="tag">Pair Programming</li>
+                                <li class="tag">WCAG/Accessibility</li>
+                                <li class="tag">Responsive Design</li>
+                            </ul>
+                            <h5>( Familiar )</h5>
+                            <ul class="skillsList">
+                                <li class="tag">AWS</li>
+                                <li class="tag">Java</li>
+                                <li class="tag">C</li>
+                                <li class="tag">SQL</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-      <section class="projects" id="projects">
-        <div class="wrapper">
-          <h3 class="sectionTitle">Portfolio</h3>
-          <h4>Recent Projects</h4>
-          <p class="hoverMsg accentText">( Hover to view the project demos )</p>
-          <ul class="projectsSection">
-            <!-- Project 4 -->
-            <li class="projectDemo" data-aos="fade-up-right" data-aos-duration="1200">
-              <video class="projectVideo">
-                <source src="./assets/images/backronym.mp4" loop muted="muted" />
-                Your browser does not support the HTML5 video element.
-              </video>
-              <img
-                src="./assets/images/backronym.jpg"
-                class="projectScreenshot"
-                alt="Screenshot of the Backronym Generator website"
-              />
-            </li>
-            <li class="projectDetails">
-              <div class="projectText">
-                <h4 class="projectName">Backronym Generator</h4>
-                <div class="projectTools">
-                  <ul class="projectToolsList">
-                    <li class="tag">HTML</li>
-                    <li class="tag">Sass</li>
-                    <li class="tag">React</li>
-                    <li class="tag">Firebase</li>
-                    <li class="tag">ChartJS</li>
-                    <li class="tag">RESTful API</li>
-                  </ul>
+            <section class="projects" id="projects">
+                <div class="wrapper">
+                    <h3 class="sectionTitle">Portfolio</h3>
+                    <h4>Recent Projects</h4>
+                    <p class="hoverMsg accentText">( Hover to view the project demos )</p>
+                    <ul class="projectsSection">
+                        <!-- Project 4 -->
+                        <li class="projectDemo" data-aos="fade-up-right" data-aos-duration="1200">
+                            <video class="projectVideo">
+                                <source src="./assets/images/backronym.mp4" loop muted="muted" />
+                                Your browser does not support the HTML5 video element.
+                            </video>
+                            <img
+                                src="./assets/images/backronym.jpg"
+                                class="projectScreenshot"
+                                alt="Screenshot of the Backronym Generator website"
+                            />
+                        </li>
+                        <li class="projectDetails">
+                            <div class="projectText">
+                                <h4 class="projectName">Backronym Generator</h4>
+                                <div class="projectTools">
+                                    <ul class="projectToolsList">
+                                        <li class="tag">HTML</li>
+                                        <li class="tag">Sass</li>
+                                        <li class="tag">React</li>
+                                        <li class="tag">Firebase</li>
+                                        <li class="tag">ChartJS</li>
+                                        <li class="tag">RESTful API</li>
+                                    </ul>
+                                </div>
+                                <p class="projectSummary">
+                                    This backronym generator app was built in React, using Github as collaboration and
+                                    version control tool with 3 other team members. Its features include user
+                                    authentication with session persistence, loading states, CRUD functionalities,
+                                    ChartJS integration and data drawn from the Google Ngram API. The user has the
+                                    ability to save backronyms, delete them, 'like' other saved backronyms and delete
+                                    their account along with all their saved data.
+                                </p>
+                            </div>
+                            <div class="projectLinks">
+                                <a
+                                    href="https://backronymgen.netlify.app/"
+                                    class="linkBtn hoverUnderline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Live Site →</a
+                                >
+                                <a
+                                    href="https://github.com/CKRP-FM/backronym-gen"
+                                    class="linkBtn hoverUnderline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View Code →</a
+                                >
+                            </div>
+                        </li>
+                        <!-- Project 3 -->
+                        <li class="projectDetails">
+                            <div class="projectText">
+                                <h4 class="projectName">Travelsheets</h4>
+                                <div class="projectTools">
+                                    <ul class="projectToolsList">
+                                        <li class="tag">HTML</li>
+                                        <li class="tag">CSS</li>
+                                        <li class="tag">React</li>
+                                        <li class="tag">Firebase</li>
+                                        <li class="tag">RESTful API</li>
+                                    </ul>
+                                </div>
+                                <p class="projectSummary">
+                                    Travelsheets is a travel board where users can share activities to do in various
+                                    cities. It generates stock photos for new locations using the Unsplash API and
+                                    integrates a profanity filtering API as well. The application leverages Firebase
+                                    Authentication and Realtime Database to store user and cities data. It also utilizes
+                                    various React functionalities (Router, useState, useEffect, useContext).
+                                </p>
+                            </div>
+                            <div class="projectLinks">
+                                <a
+                                    href="https://uptravel.netlify.app/login"
+                                    class="linkBtn hoverUnderline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Live Site →</a
+                                >
+                                <a
+                                    href="https://github.com/pinggyu/ping-yu-project-three"
+                                    class="linkBtn hoverUnderline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View Code →</a
+                                >
+                            </div>
+                        </li>
+                        <li class="projectDemo" data-aos="fade-up-left" data-aos-duration="1200">
+                            <video class="projectVideo">
+                                <source src="./assets/images/travelsheets.mp4" loop muted="muted" />
+                                Your browser does not support the HTML5 video element.
+                            </video>
+                            <img
+                                src="./assets/images/travelsheets.jpg"
+                                class="projectScreenshot"
+                                alt="Screenshot of the Travelsheets website"
+                            />
+                        </li>
+                        <!-- Project 2 -->
+                        <li class="projectDemo" data-aos="fade-up-right" data-aos-duration="1200">
+                            <video class="projectVideo">
+                                <source src="./assets/images/jobseekr.mp4" loop muted="muted" />
+                                Your browser does not support the HTML5 video element.
+                            </video>
+                            <img
+                                src="./assets/images/jobseekr.png"
+                                class="projectScreenshot"
+                                alt="Screenshot of the JobSeekr website"
+                            />
+                        </li>
+                        <li class="projectDetails">
+                            <div class="projectText">
+                                <h4 class="projectName">JobSeekr</h4>
+                                <div class="projectTools">
+                                    <ul class="projectToolsList">
+                                        <li class="tag">HTML</li>
+                                        <li class="tag">Sass</li>
+                                        <li class="tag">JavaScript</li>
+                                        <li class="tag">RESTful API</li>
+                                    </ul>
+                                </div>
+                                <p class="projectSummary">
+                                    JobSeekr is a job searching website leveraging Adzuna's RESTful API & built in
+                                    vanilla JavaScript. This was a pair programming project completed with another team
+                                    member. Features include a dark/light mode toggle, asynchronous API call & error
+                                    handling, mobile-first/responsive design, sorting and pagination of results.
+                                </p>
+                            </div>
+                            <div class="projectLinks">
+                                <a
+                                    href="https://jobseekr.netlify.app/"
+                                    class="linkBtn hoverUnderline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Live Site →</a
+                                >
+                                <a
+                                    href="https://github.com/ping-ryan/jobseekr"
+                                    class="linkBtn hoverUnderline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View Code →</a
+                                >
+                            </div>
+                        </li>
+                        <!-- Project 1 -->
+                        <li class="projectDetails">
+                            <div class="projectText">
+                                <h4 class="projectName">Willow</h4>
+                                <div class="projectTools">
+                                    <ul class="projectToolsList">
+                                        <li class="tag">HTML</li>
+                                        <li class="tag">Sass</li>
+                                        <li class="tag">JavaScript</li>
+                                    </ul>
+                                </div>
+                                <p class="projectSummary">
+                                    Willow is a multi-page PSD conversion made using given mockup design files,
+                                    featuring a Home, Blog and Contact page. This is a fully responsive website (down to
+                                    320px), built in Sass, and adheres to accessibility best standards (including skip
+                                    links, aria labels and proper structural elements like heading orders).
+                                </p>
+                            </div>
+                            <div class="projectLinks">
+                                <a
+                                    href="https://willowblog.netlify.app/"
+                                    class="linkBtn hoverUnderline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Live Site →</a
+                                >
+                                <a
+                                    href="https://github.com/pinggyu/ping-yu-project-one"
+                                    class="linkBtn hoverUnderline"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >View Code →</a
+                                >
+                            </div>
+                        </li>
+                        <li class="projectDemo" data-aos="fade-up-left" data-aos-duration="1200">
+                            <video class="projectVideo">
+                                <source src="./assets/images/willow.mp4" loop muted="muted" />
+                                Your browser does not support the HTML5 video element.
+                            </video>
+                            <img
+                                src="./assets/images/willow.jpg"
+                                class="projectScreenshot"
+                                alt="Screenshot of the Willow Blog website"
+                            />
+                        </li>
+                    </ul>
+                    <div class="viewMore">
+                        <a
+                            href="https://github.com/pinggyu"
+                            class="linkButton"
+                            data-hover="View More →"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ><span class="buttonHover">View More →</span></a
+                        >
+                    </div>
                 </div>
-                <p class="projectSummary">
-                  This backronym generator app was built in React, using Github as collaboration and version control
-                  tool with 3 other team members. Its features include user authentication with session persistence,
-                  loading states, CRUD functionalities, ChartJS integration and data drawn from the Google Ngram API.
-                  The user has the ability to save backronyms, delete them, 'like' other saved backronyms and delete
-                  their account along with all their saved data.
-                </p>
-              </div>
-              <div class="projectLinks">
-                <a href="https://backronymgen.netlify.app/" class="linkBtn hoverUnderline">Live Site →</a>
-                <a href="https://github.com/CKRP-FM/backronym-gen" class="linkBtn hoverUnderline">View Code →</a>
-              </div>
-            </li>
-            <!-- Project 3 -->
-            <li class="projectDetails">
-              <div class="projectText">
-                <h4 class="projectName">Travelsheets</h4>
-                <div class="projectTools">
-                  <ul class="projectToolsList">
-                    <li class="tag">HTML</li>
-                    <li class="tag">CSS</li>
-                    <li class="tag">React</li>
-                    <li class="tag">Firebase</li>
-                    <li class="tag">RESTful API</li>
-                  </ul>
-                </div>
-                <p class="projectSummary">
-                  Travelsheets is a travel board where users can share activities to do in various cities. It generates
-                  stock photos for new locations using the Unsplash API and integrates a profanity filtering API as
-                  well. The application leverages Firebase Authentication and Realtime Database to store user and cities
-                  data. It also utilizes various React functionalities (Router, useState, useEffect, useContext).
-                </p>
-              </div>
-              <div class="projectLinks">
-                <a href="https://uptravel.netlify.app/login" class="linkBtn hoverUnderline">Live Site →</a>
-                <a href="https://github.com/pinggyu/ping-yu-project-three" class="linkBtn hoverUnderline"
-                  >View Code →</a
-                >
-              </div>
-            </li>
-            <li class="projectDemo" data-aos="fade-up-left" data-aos-duration="1200">
-              <video class="projectVideo">
-                <source src="./assets/images/travelsheets.mp4" loop muted="muted" />
-                Your browser does not support the HTML5 video element.
-              </video>
-              <img
-                src="./assets/images/travelsheets.jpg"
-                class="projectScreenshot"
-                alt="Screenshot of the Travelsheets website"
-              />
-            </li>
-            <!-- Project 2 -->
-            <li class="projectDemo" data-aos="fade-up-right" data-aos-duration="1200">
-              <video class="projectVideo">
-                <source src="./assets/images/jobseekr.mp4" loop muted="muted" />
-                Your browser does not support the HTML5 video element.
-              </video>
-              <img
-                src="./assets/images/jobseekr.png"
-                class="projectScreenshot"
-                alt="Screenshot of the JobSeekr website"
-              />
-            </li>
-            <li class="projectDetails">
-              <div class="projectText">
-                <h4 class="projectName">JobSeekr</h4>
-                <div class="projectTools">
-                  <ul class="projectToolsList">
-                    <li class="tag">HTML</li>
-                    <li class="tag">Sass</li>
-                    <li class="tag">JavaScript</li>
-                    <li class="tag">RESTful API</li>
-                  </ul>
-                </div>
-                <p class="projectSummary">
-                  JobSeekr is a job searching website leveraging Adzuna's RESTful API & built in vanilla JavaScript.
-                  This was a pair programming project completed with another team member. Features include a dark/light
-                  mode toggle, asynchronous API call & error handling, mobile-first/responsive design, sorting and
-                  pagination of results.
-                </p>
-              </div>
-              <div class="projectLinks">
-                <a href="https://jobseekr.netlify.app/" class="linkBtn hoverUnderline">Live Site →</a>
-                <a href="https://github.com/ping-ryan/jobseekr" class="linkBtn hoverUnderline">View Code →</a>
-              </div>
-            </li>
-            <!-- Project 1 -->
-            <li class="projectDetails">
-              <div class="projectText">
-                <h4 class="projectName">Willow</h4>
-                <div class="projectTools">
-                  <ul class="projectToolsList">
-                    <li class="tag">HTML</li>
-                    <li class="tag">Sass</li>
-                    <li class="tag">JavaScript</li>
-                  </ul>
-                </div>
-                <p class="projectSummary">
-                  Willow is a multi-page PSD conversion made using given mockup design files, featuring a Home, Blog and
-                  Contact page. This is a fully responsive website (down to 320px), built in Sass, and adheres to
-                  accessibility best standards (including skip links, aria labels and proper structural elements like
-                  heading orders).
-                </p>
-              </div>
-              <div class="projectLinks">
-                <a href="https://willowblog.netlify.app/" class="linkBtn hoverUnderline">Live Site →</a>
-                <a href="https://github.com/pinggyu/ping-yu-project-one" class="linkBtn hoverUnderline">View Code →</a>
-              </div>
-            </li>
-            <li class="projectDemo" data-aos="fade-up-left" data-aos-duration="1200">
-              <video class="projectVideo">
-                <source src="./assets/images/willow.mp4" loop muted="muted" />
-                Your browser does not support the HTML5 video element.
-              </video>
-              <img
-                src="./assets/images/willow.jpg"
-                class="projectScreenshot"
-                alt="Screenshot of the Willow Blog website"
-              />
-            </li>
-          </ul>
-          <div class="viewMore">
-            <a href="https://github.com/pinggyu" class="linkButton" data-hover="View More →"
-              ><span class="buttonHover">View More →</span></a
-            >
-          </div>
-        </div>
-      </section>
+            </section>
 
-      <section class="contact" id="contact">
-        <div class="wrapper">
-          <h3 class="sectionTitle">Get in touch</h3>
-          <div class="contactSection">
-            <div class="emailSocialsContainer" data-aos="fade-right" data-aos-duration="1200">
-              <div class="emailContainer">
-                <p class="smallCaps">E-Mail</p>
-                <div class="clickToCopyContainer">
-                  <button class="email clickToCopyBtn" id="clickToCopyBtn" title="Click to Copy">
-                    contactpingyu@gmail.com
-                  </button>
-                  <span>Copied</span>
+            <section class="contact" id="contact">
+                <div class="wrapper">
+                    <h3 class="sectionTitle">Get in touch</h3>
+                    <div class="contactSection">
+                        <div class="emailSocialsContainer" data-aos="fade-right" data-aos-duration="1200">
+                            <div class="emailContainer">
+                                <p class="smallCaps">E-Mail</p>
+                                <div class="clickToCopyContainer">
+                                    <button class="email clickToCopyBtn" id="clickToCopyBtn" title="Click to Copy">
+                                        contactpingyu@gmail.com
+                                    </button>
+                                    <span>Copied</span>
+                                </div>
+                                <a href="mailto:contactpingyu@gmail.com" class="clickToCopyBackup">
+                                    contactpingyu@gmail.com
+                                </a>
+                            </div>
+                            <div class="socials">
+                                <p class="smallCaps">Find me on</p>
+                                <ul class="socialLinks">
+                                    <li>
+                                        <a href="https://github.com/pinggyu" target="_blank" rel="noopener noreferrer">
+                                            <i class="fa-brands fa-github socialIcon" aria-hidden="true"></i>
+                                            <span class="sr-only">Link to Github</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://www.linkedin.com/in/pingyuuu/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <i class="fa-brands fa-linkedin-in socialIcon" aria-hidden="true"></i>
+                                            <span class="sr-only">Link to LinkedIn</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://medium.com/@pinggyu" target="_blank" rel="noopener noreferrer">
+                                            <i class="fa-brands fa-medium socialIcon" aria-hidden="true"></i>
+                                            <span class="sr-only">Link to Medium profile</span>
+                                        </a>
+                                    </li>
+                                    <!-- <li>
+                                        <a href="mailto:contactpingyu@gmail.com">
+                                            <i class="fa-solid fa-envelope socialIcon" aria-hidden="true"></i>
+                                            <span class="sr-only">Send Email link</span>
+                                        </a>
+                                    </li> -->
+                                    <li>
+                                        <a
+                                            href="https://calendly.com/pingyuuu"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <i class="fa-solid fa-calendar-days socialIcon" aria-hidden="true"></i>
+                                            <span class="sr-only">Schedule Calendly Link</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contactFormContainer" data-aos="fade-left" data-aos-duration="1200">
+                            <form
+                                action="https://formspree.io/f/mpznaknw"
+                                method="POST"
+                                class="contactForm"
+                                id="contactForm"
+                            >
+                                <p class="smallCaps formTitle">Drop a line below ↓</p>
+                                <!-- Input 1 -->
+                                <div class="formRow">
+                                    <input type="text" name="name" id="name" class="formInput" required />
+                                    <label for="name" class="inputLabel">Name</label>
+                                </div>
+                                <!-- Input 2 -->
+                                <div class="formRow">
+                                    <input type="email" name="email" id="email" class="formInput" required />
+                                    <label for="email" class="inputLabel">Email</label>
+                                </div>
+                                <!-- Input  -->
+                                <div class="formRow">
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        class="formInput"
+                                        cols="20"
+                                        rows="5"
+                                        required
+                                    ></textarea>
+                                    <label for="message" class="inputLabel">Message</label>
+                                </div>
+                                <!-- Submit button -->
+                                <button type="submit" class="submitBtn linkButton" data-hover="Send Message →">
+                                    <span class="buttonHover">Send Message →</span>
+                                </button>
+                                <p class="formStatus" id="formStatus"></p>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <a href="mailto:contactpingyu@gmail.com" class="clickToCopyBackup"> contactpingyu@gmail.com </a>
-              </div>
-              <div class="socials">
-                <p class="smallCaps">Find me on</p>
-                <ul class="socialLinks">
-                  <li>
-                    <a href="https://github.com/pinggyu">
-                      <i class="fa-brands fa-github socialIcon" aria-hidden="true"></i>
-                      <span class="sr-only">Link to Github</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/in/pingyuuu/">
-                      <i class="fa-brands fa-linkedin-in socialIcon" aria-hidden="true"></i>
-                      <span class="sr-only">Link to LinkedIn</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://medium.com/@pinggyu">
-                      <i class="fa-brands fa-medium socialIcon" aria-hidden="true"></i>
-                      <span class="sr-only">Link to Medium profile</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="mailto:contactpingyu@gmail.com">
-                      <i class="fa-solid fa-envelope socialIcon" aria-hidden="true"></i>
-                      <span class="sr-only">Send Email link</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="contactFormContainer" data-aos="fade-left" data-aos-duration="1200">
-              <form action="https://formspree.io/f/mpznaknw" method="POST" class="contactForm" id="contactForm">
-                <p class="smallCaps formTitle">Drop a line below ↓</p>
-                <!-- Input 1 -->
-                <div class="formRow">
-                  <input type="text" name="name" id="name" class="formInput" required />
-                  <label for="name" class="inputLabel">Name</label>
-                </div>
-                <!-- Input 2 -->
-                <div class="formRow">
-                  <input type="email" name="email" id="email" class="formInput" required />
-                  <label for="email" class="inputLabel">Email</label>
-                </div>
-                <!-- Input  -->
-                <div class="formRow">
-                  <textarea id="message" name="message" class="formInput" cols="20" rows="5" required></textarea>
-                  <label for="message" class="inputLabel">Message</label>
-                </div>
-                <!-- Submit button -->
-                <button type="submit" class="submitBtn linkButton" data-hover="Send Message →">
-                  <span class="buttonHover">Send Message →</span>
-                </button>
-                <p class="formStatus" id="formStatus"></p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <a href="#home">Back to the top ↑</a>
-      <p class="copyright">Ⓒ 2022 - Developed by Ping Yu</p>
-    </footer>
-  </body>
+            </section>
+        </main>
+        <footer>
+            <a href="#home">Back to the top ↑</a>
+            <p class="copyright">Ⓒ 2022 - Developed by Ping Yu</p>
+        </footer>
+    </body>
 </html>
